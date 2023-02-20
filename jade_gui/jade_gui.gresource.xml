@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/al/getcryst/jadegui">
+    <file>window.ui</file>
+    <file>about.ui</file>
+    <file>widgets/timezone.ui</file>
+    <file>widgets/layout.ui</file>
+    <file>widgets/variant.ui</file>
+    <file>widgets/desktop.ui</file>
+    <file>widgets/disk.ui</file>
+    <file>widgets/partition.ui</file>
+    <file>widgets/locale.ui</file>
+    <file>widgets/selected_locale.ui</file>
+    <file>pages/desktop_screen.ui</file>
+    <file>pages/finished_screen.ui</file>
+    <file>pages/install_screen.ui</file>
+    <file>pages/keyboard/keyboard_screen.ui</file>
+    <file>pages/keyboard/keyboard_dialog.ui</file>
+    <file>pages/misc_screen.ui</file>
+    <file>pages/partition_screen.ui</file>
+    <file>pages/summary_screen.ui</file>
+	<file>pages/timezone/timezone_screen.ui</file>
+    <file>pages/user_screen.ui</file>
+    <file>pages/welcome_screen.ui</file>
+	<file>pages/timezone/timezone_dialog.ui</file>
+    <file>pages/locale/locale_dialog.ui</file>
+    <file>pages/locale/locale_screen.ui</file>
+    <file>gtk/help-overlay.ui</file>
+    <file>crystal-logo-minimal.png</file>
+    <file>style.css</file>
+  </gresource>
+  <gresource prefix="/al/getcryst/jadegui/icons/scalable/actions">
+    <file
+      alias="padlock2-symbolic.svg">../data/icons/padlock2-symbolic.svg</file>
+    <file alias="right-symbolic.svg">../data/icons/right-symbolic.svg</file>
+    <file alias="left-symbolic.svg">../data/icons/left-symbolic.svg</file>
+    <file alias="loupe-symbolic.svg">../data/icons/loupe-symbolic.svg</file>
+    <file
+      alias="clock-alt-symbolic.svg">../data/icons/clock-alt-symbolic.svg</file>
+  </gresource>
+</gresources>

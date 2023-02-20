@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="UserScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="AdwStatusPage">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="title" translatable="true">Create User</property>
+            <property
+              name="description"
+              translatable="true">You can add additional users later.</property>
+            <property name="css-classes">jade_compact</property>
+            <child>
+              <object class="AdwPreferencesPage">
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <child>
+                      <object class="AdwEntryRow" id="username_entry">
+                        <property
+                          name="title"
+                          translatable="true">Username</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPasswordEntryRow" id="password_entry">
+                        <property
+                          name="title"
+                          translatable="true">Password</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object
+                        class="AdwPasswordEntryRow"
+                        id="password_confirmation">
+                        <property
+                          name="title"
+                          translatable="true">Confirm Password</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkListBox">
+                        <property name="margin-top">7</property>
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="activatable">false</property>
+                            <property name="selectable">false</property>
+                            <property
+                              name="title"
+                              translatable="true">Adminstrator</property>
+                            <property
+                              name="subtitle">Allows access to system settings, users, and sudo</property>
+                            <child>
+                              <object class="GtkSwitch" id="enable_sudo_switch">
+                                <property name="valign">center</property>
+                                <property name="state">true</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <property name="title">System</property>
+                      <child>
+                        <object class="AdwActionRow">
+                          <property name="title" translatable="true">Enable Superuser Account</property>
+                          <property name="subtitle">Allow logging into the root account</property>
+                          <child>
+                            <object class="GtkSwitch" id="enable_root_switch">
+                              <property name="valign">center</property>
+                              <property name="state">false</property>
+                            </object>
+                          </child>
+                        </object>
+                      </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

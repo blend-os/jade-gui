@@ -1,0 +1,34 @@
+{
+  "name": "modules",
+  "buildsystem": "simple",
+  "build-commands": [],
+  "modules": [
+    {
+      "name": "vte",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/GNOME/vte.git",
+          "commit": "3ed53bfaa7344ce5b7727a60a2d33315b15201e5"
+        }
+      ],
+      "config-opts": [
+        "-Ddocs=false",
+        "-Dvapi=false",
+        "-Dgtk4=true",
+        "-Dgtk3=false"
+      ]
+    },
+    {
+      "name": "jadegui",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="WelcomeScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="hexpand">true</property>
+        <property name="vexpand">true</property>
+        <property name="valign">center</property>
+        <property name="orientation">vertical</property>
+
+        <child>
+          <object class="GtkImage" id="crystal-logo">
+            <property
+              name="resource">/al/getcryst/jadegui/crystal-logo-minimal.png</property>
+            <property name="pixel-size">200</property>
+            <property name="margin-start">200</property>
+            <property name="margin-end">200</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwStatusPage">
+            <property name="title" translatable="yes">Welcome to Crystal Linux</property>
+            <property
+              name="description"
+              translatable="yes">Press Start to start installing Crystal Linux!</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="hexpand">true</property>
+            <property name="spacing">5</property>
+            <child>
+              <object class="GtkLabel" id="no_internet">
+                <property name="label">Please connect to the internet first!</property>
+                <property name="visible">false</property>
+                <style>
+                  <class name="error"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="next_button">
+                <property name="label">Start</property>
+                <!-- <property name="sensitive">False</property> -->
+                <style>
+                  <class name="suggested-action"/>
+                  <class name="pill"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

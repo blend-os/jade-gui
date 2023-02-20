@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="DesktopScreen" parent="AdwBin">
+    <property name="vexpand">true</property>
+    <property name="hexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="AdwStatusPage"> <property
+              name="title"
+              translatable="true">Select Desktop</property> <property
+              name="description"
+              translatable="true">You can install more desktops later.</property>
+            <property name="css-classes">jade_compact_desktop</property>
+            <child>
+              <object class="AdwPreferencesPage">
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <child>
+                      <object class="GtkListBox" id="list_desktops">
+                        <property name="hexpand">true</property>
+                        <property name="vexpand">true</property>
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

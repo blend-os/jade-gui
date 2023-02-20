@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"fmt": "yarn prettier --write '**/*.{xml,ui,css}' '!build-dir' '!_build' '!.flatpak-builder' && python -m black ."
+	},
+	"devDependencies": {
+		"@prettier/plugin-xml": "^2.2.0",
+		"prettier": "^2.7.1"
+	},
+	"prettier": {
+		"bracketSameLine": true,
+		"singleAttributePerLine": false,
+		"xmlSelfClosingSpace": false
+	}
+}

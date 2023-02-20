@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="LanguageScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwStatusPage">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property
+              name="title"
+              translatable="true">Select additional locales</property>
+            <property
+              name="description"
+              translatable="true">Select additional locales to enable</property>
+            <property name="css-classes">jade_compact</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox" id="language_search">
+                    <child>
+                      <object class="GtkSearchEntry" id="language_entry_search">
+                        <property name="hexpand">true</property>
+                        <property name="margin-end">30</property>
+                        <property name="margin-start">30</property>
+                        <property
+                          name="placeholder-text">Search for a locale</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwPreferencesPage">
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="GtkListBox" id="list_locales">
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="margin-start">20</property>
+            <property name="margin-end">20</property>
+            <property name="margin-bottom">20</property>
+            <property name="homogeneous">true</property>
+
+            <child>
+              <object class="GtkButton" id="back_button">
+                <property name="icon-name">left-symbolic</property>
+                <property name="halign">start</property>
+                <property name="valign">start</property>
+                <property
+                  name="tooltip-text"
+                  translatable="true">Move to previous page</property>
+                <style>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkButton" id="next_page_button">
+                <property name="icon-name">right-symbolic</property>
+                <property name="halign">end</property>
+                <property name="valign">end</property>
+                <property
+                  name="tooltip-text"
+                  translatable="true">Move to next page</property>
+                <property name="sensitive">False</property>
+                <style>
+                  <class name="suggested-action"/>
+                  <class name="circular"/>
+                </style>
+              </object>
+            </child>
+          </object>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>

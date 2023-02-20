@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="FinishedScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="hexpand">true</property>
+        <property name="vexpand">true</property>
+        <child>
+          <object class="AdwStatusPage">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property
+              name="title"
+              translatable="true">Installation Completed!</property>
+            <property
+              name="description"
+              translatable="true">Reboot the device to start using Crystal Linux!</property>
+            <property name="icon-name">al.getcryst.jadegui</property>
+            <property name="css-classes">jade_compact</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+                <child>
+                  <object class="GtkButton" id="output_button">
+                    <property name="margin-start">12</property>
+                    <property
+                      name="label"
+                      translatable="true">Show Output</property>
+                    <style>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="reboot_button">
+                    <property name="margin-start">12</property>
+                    <property name="label" translatable="true">Reboot</property>
+                    <style>
+                      <class name="suggested-action"/>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

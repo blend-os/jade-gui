@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the jade_gui package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jade_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-03 18:58+0200\n"
+"PO-Revision-Date: 2022-12-11 16:31+0000\n"
+"Last-Translator: cosita3cz <kokosove18@gmail.com>\n"
+"Language-Team: Czech <https://i18n.getcryst.al/projects/crystal-linux/"
+"jade-gui/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
+
+#: data/al.getcryst.jadegui.desktop.in:3
+msgid "Install Crystal Linux"
+msgstr "Instalovat Crystal Linux"
+
+#: data/al.getcryst.jadegui.appdata.xml.in:7
+msgid "No description"
+msgstr "Žádný popis"
+
+#: src/window.ui:17
+msgid "About Jade GUI"
+msgstr "O Jade GUI"
+
+#: src/window.ui:85
+msgid "Welcome to Crystal Linux"
+msgstr "Vítejte v Crystal Linux(u)"
+
+#: src/window.ui:86
+msgid "Press Start to start installing Crystal Linux!"
+msgstr "Zmáčkněte start, a započněte instalaci Crystal Linux!"
+
+#: src/pages/desktop_screen.ui:13
+msgid "Select Desktop"
+msgstr "Vyberte Desktop"
+
+#: src/pages/desktop_screen.ui:14
+msgid "You can install more desktops later."
+msgstr "Můžete si nainstalovat víc Desktopů později."
+
+#: src/pages/desktop_screen.ui:40 src/pages/keyboard_screen.ui:57
+#: src/pages/language_screen.ui:57 src/pages/misc_screen.ui:81
+#: src/pages/partition_screen.ui:135
+msgid "Next"
+msgstr "Další"
+
+#: src/pages/finished_screen.ui:15
+msgid "Installation Completed!"
+msgstr "Instalace dokončena!"
+
+#: src/pages/finished_screen.ui:16
+msgid "Reboot the device to start using Crystal Linux!"
+msgstr "Restartujte zařízení a začněte používat Crystal Linux!"
+
+#: src/pages/finished_screen.ui:28
+msgid "Reboot"
+msgstr "Restartovat"
+
+#: src/pages/install_screen.ui:15
+msgid "Installing Crystal"
+msgstr "Instaluji Crystal"
+
+#: src/pages/install_screen.ui:16
+msgid "This may take some time"
+msgstr "Toto bude chviličku trvat"
+
+#: src/pages/keyboard_screen.ui:15
+msgid "Select Keyboard Layout"
+msgstr "Vyberte rozhraní klávesnice"
+
+#: src/pages/language_screen.ui:15
+msgid "Select additional locales"
+msgstr "Vyberte přídavné locale"
+
+#: src/pages/language_screen.ui:16
+msgid "Select additional locales to enable"
+msgstr "Vyberte přídavné locale pro zapnutí"
+
+#: src/pages/misc_screen.ui:15
+msgid "Miscellaneous"
+msgstr "Různé"
+
+#: src/pages/misc_screen.ui:22
+msgid "Custom Hostname"
+msgstr "Customizovaný Hostname"
+
+#: src/pages/misc_screen.ui:33
+msgid "IPv6 loopback"
+msgstr "IPv6 Loopback"
+
+#: src/pages/misc_screen.ui:34
+msgid "This can fix IPv6 connectivity issues with some ISPs."
+msgstr "Toto může opravit konektivitu IPv6 s ISP."
+
+#: src/pages/misc_screen.ui:45
+msgid "Timeshift"
+msgstr "Časový posun"
+
+#: src/pages/misc_screen.ui:46
+msgid "Support snapshots as a means to roll back to earlier states of the system."
+msgstr ""
+"Podporujte snapshoty jako prostředek k návratu do dřívějších stavů systému."
+
+#: src/pages/misc_screen.ui:57
+msgid "Zramd"
+msgstr "zramd"
+
+#: src/pages/misc_screen.ui:58
+msgid "Creates a compressed area of Swap in RAM."
+msgstr "Vytvoří kompresované mista Swapu v RAMce."
+
+#: src/pages/partition_screen.ui:26
+msgid "Select partitions to install to"
+msgstr "Vyberte svazek na který to budeme instalovat"
+
+#: src/pages/partition_screen.ui:27
+msgid "Make sure to have at least one root partition"
+msgstr "Je potřeba mít alespoň 1 root svazek"
+
+#: src/pages/partition_screen.ui:37
+msgid "Quick Actions"
+msgstr "Rychlé akce"
+
+#: src/pages/partition_screen.ui:45
+msgid "Automatic Partitioning"
+msgstr "Automatické rozdělení disku"
+
+#: src/pages/partition_screen.ui:50
+msgid "Open GParted"
+msgstr "Otevřít GParted"
+
+#: src/pages/partition_screen.ui:55
+msgid "Open terminal"
+msgstr "Otevřít terminál"
+
+#: src/pages/partition_screen.ui:68
+msgid "Available partitions"
+msgstr "Dostupné Svazky"
+
+#: src/pages/partition_screen.ui:96
+msgid "Select Installation Disk"
+msgstr "Vyberte instalační disk"
+
+#: src/pages/partition_screen.ui:97
+msgid ""
+"Select the disk you want to install Crystal Linux on. This will wipe the "
+"entire disk you selected."
+msgstr ""
+"Vyberte disk na který chcete nainstalovat Crystal Linux. Ten se potom "
+"zformátuje, takže na něm nic nezbude kromě systému Crystal Linux."
+
+#: src/pages/partition_screen.ui:107
+msgid "Switch to manual partitioning"
+msgstr "Manuálně rozdělit disk"
+
+#: src/pages/summary_screen.ui:15
+msgid "Summary"
+msgstr "Shrnutí"
+
+#: src/pages/summary_screen.ui:21
+msgid "Timezone and Locale"
+msgstr "Časová zóna a Locale"
+
+#: src/pages/summary_screen.ui:27
+msgid "region/location"
+msgstr "Región/Lokace"
+
+#: src/pages/summary_screen.ui:47
+msgid "Keyboard Layout"
+msgstr "Rozložení Klávesnice"
+
+#: src/pages/summary_screen.ui:53
+msgid "layout"
+msgstr "Rozložení"
+
+#: src/pages/summary_screen.ui:73
+msgid "User Settings"
+msgstr "Uživatelské nastavení"
+
+#: src/pages/summary_screen.ui:79
+msgid "username"
+msgstr "Uživatelské jméno"
+
+#: src/pages/summary_screen.ui:91
+msgid "sudo enabled/disabled"
+msgstr "sudo zapnout/vypnout"
+
+#: src/pages/summary_screen.ui:103
+msgid "root enabled/disabled"
+msgstr "root zapnout/vypnout"
+
+#: src/pages/summary_screen.ui:122
+msgid "Desktop"
+msgstr "Plocha"
+
+#: src/pages/summary_screen.ui:128
+msgid "desktop"
+msgstr "plocha"
+
+#: src/pages/summary_screen.ui:147
+msgid "Partition Settings"
+msgstr "Nastavení rozdělení disku"
+
+#: src/pages/summary_screen.ui:153
+msgid "selected install partition"
+msgstr "Vybraný instalační svazek"
+
+#: src/pages/summary_screen.ui:166
+msgid "legacy bios/uefi"
+msgstr "Legacy BIOS/UEFI"
+
+#: src/pages/summary_screen.ui:178
+msgid "Miscellaneous Settings"
+msgstr "Různé Nastavení"
+
+#: src/pages/summary_screen.ui:184
+msgid "ipv6 enabled/disabled"
+msgstr "IPv6 zapnout/vypnout"
+
+#: src/pages/summary_screen.ui:196
+msgid "timeshift enabled/disabled"
+msgstr "Časový posun zapnout/vypnout"
+
+#: src/pages/summary_screen.ui:208
+msgid "zramd enabled/disabled"
+msgstr "zramd zapnout/vypnout"
+
+#: src/pages/summary_screen.ui:238 src/pages/timezone_screen.ui:59
+#: src/pages/user_screen.ui:83
+msgid "Move to next page"
+msgstr "Přesunout na další stránku"
+
+#: src/pages/timezone_screen.ui:15
+msgid "Select Timezone"
+msgstr "Vyberte časovou zónu"
+
+#: src/pages/timezone_screen.ui:26
+msgid "Search for a timezone"
+msgstr "Hledat pro časovou zónu"
+
+#: src/pages/user_screen.ui:15
+msgid "Create User"
+msgstr "Vytvořit uživatele"
+
+#: src/pages/user_screen.ui:16
+msgid "You can add additional users later."
+msgstr "Můžete kdyžtak přidat jiné uživatele později."
+
+#: src/pages/user_screen.ui:23
+msgid "Enter Username"
+msgstr "Zadejte uživatelské jméno"
+
+#: src/pages/user_screen.ui:28
+msgid "Enter Password"
+msgstr "Zadejte heslo"
+
+#: src/pages/user_screen.ui:33
+msgid "Re-enter Password"
+msgstr "Ještě jednou heslo"
+
+#: src/pages/user_screen.ui:44
+msgid "Adminstrator"
+msgstr "Administrátor"
+
+#: src/pages/user_screen.ui:56
+msgid "Enable Superuser Account"
+msgstr "Povolit účet superuser"

@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the jade_gui package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jade_gui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-03 18:58+0200\n"
+"PO-Revision-Date: 2022-10-29 18:17+0000\n"
+"Last-Translator: Nick Pryshchepa <nick@tar.black>\n"
+"Language-Team: Russian <https://i18n.getcryst.al/projects/crystal-linux/"
+"jade-gui/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14\n"
+
+#: data/al.getcryst.jadegui.desktop.in:3
+msgid "Install Crystal Linux"
+msgstr "Установить Crystal Linux"
+
+#: data/al.getcryst.jadegui.appdata.xml.in:7
+msgid "No description"
+msgstr "Нет описания"
+
+#: src/window.ui:17
+msgid "About Jade GUI"
+msgstr "О графическом интерфейсе Jade"
+
+#: src/window.ui:85
+msgid "Welcome to Crystal Linux"
+msgstr "Добро пожаловать в Crystal Linux"
+
+#: src/window.ui:86
+msgid "Press Start to start installing Crystal Linux!"
+msgstr "Нажмите Start, чтобы начать установку Crystal Linux!"
+
+#: src/pages/desktop_screen.ui:13
+msgid "Select Desktop"
+msgstr "Выбрать рабочий стол"
+
+#: src/pages/desktop_screen.ui:14
+msgid "You can install more desktops later."
+msgstr "Вы можете установить больше рабочих столов позже."
+
+#: src/pages/desktop_screen.ui:40 src/pages/keyboard_screen.ui:57
+#: src/pages/language_screen.ui:57 src/pages/misc_screen.ui:81
+#: src/pages/partition_screen.ui:135
+msgid "Next"
+msgstr "Дальше"
+
+#: src/pages/finished_screen.ui:15
+msgid "Installation Completed!"
+msgstr "Установка завершена!"
+
+#: src/pages/finished_screen.ui:16
+msgid "Reboot the device to start using Crystal Linux!"
+msgstr "Перезагрузите устройство, чтобы начать использовать Crystal Linux!"
+
+#: src/pages/finished_screen.ui:28
+msgid "Reboot"
+msgstr "Перезагрузить"
+
+#: src/pages/install_screen.ui:15
+msgid "Installing Crystal"
+msgstr "Установка Crystal"
+
+#: src/pages/install_screen.ui:16
+msgid "This may take some time"
+msgstr "Это может занять некоторое время"
+
+#: src/pages/keyboard_screen.ui:15
+msgid "Select Keyboard Layout"
+msgstr "Выбрать раскладку клавиатуры"
+
+#: src/pages/language_screen.ui:15
+msgid "Select additional locales"
+msgstr "Выбор дополнительных локалей"
+
+#: src/pages/language_screen.ui:16
+msgid "Select additional locales to enable"
+msgstr "Выберите дополнительные локали для включения"
+
+#: src/pages/misc_screen.ui:15
+msgid "Miscellaneous"
+msgstr "Прочее"
+
+#: src/pages/misc_screen.ui:22
+msgid "Enter Hostname"
+msgstr "Введите имя хоста"
+
+#: src/pages/misc_screen.ui:33
+msgid "IPv6 loopback"
+msgstr "Шлейф IPv6"
+
+#: src/pages/misc_screen.ui:34
+msgid "This can fix IPv6 connectivity issues with some ISPs."
+msgstr ""
+"Это может устранить проблемы с подключением к IPv6 у некоторых "
+"интернет-провайдеров."
+
+#: src/pages/misc_screen.ui:45
+msgid "Timeshift"
+msgstr "Таймшифт"
+
+#: src/pages/misc_screen.ui:46
+msgid "Support snapshots as a means to roll back to earlier states of the system."
+msgstr ""
+"Поддержка моментальных снимков как средства отката к более ранним состояниям "
+"системы."
+
+#: src/pages/misc_screen.ui:57
+msgid "Zramd"
+msgstr "«Zramd»"
+
+#: src/pages/misc_screen.ui:58
+msgid "Creates a compressed area of Swap in RAM."
+msgstr "Создает сжатую область Swap в оперативной памяти."
+
+#: src/pages/partition_screen.ui:26
+msgid "Select partitions to install to"
+msgstr "Выбрать разделы для установки"
+
+#: src/pages/partition_screen.ui:27
+msgid "Make sure to have at least one root partition"
+msgstr "Убедитесь, что у Вас есть хотя бы один root-раздел"
+
+#: src/pages/partition_screen.ui:37
+msgid "Quick Actions"
+msgstr "Быстрые Действия"
+
+#: src/pages/partition_screen.ui:45
+msgid "Automatic Partitioning"
+msgstr "Автоматическое Разделение"
+
+#: src/pages/partition_screen.ui:50
+msgid "Open GParted"
+msgstr "Открыть GParted"
+
+#: src/pages/partition_screen.ui:55
+msgid "Open terminal"
+msgstr "Открыть GParted"
+
+#: src/pages/partition_screen.ui:68
+msgid "Available partitions"
+msgstr "Доступные разделы"
+
+#: src/pages/partition_screen.ui:96
+msgid "Select Installation Disk"
+msgstr "Выбрать Установочный Диск"
+
+#: src/pages/partition_screen.ui:97
+msgid ""
+"Select the disk you want to install Crystal Linux on. This will wipe the "
+"entire disk you selected."
+msgstr ""
+"Выберите диск, на который Вы хотите установить Crystal Linux. Это приведет к "
+"стиранию всего выбранного Вами диска."
+
+#: src/pages/partition_screen.ui:107
+msgid "Switch to manual partitioning"
+msgstr "Перейти на ручное разделение"
+
+#: src/pages/summary_screen.ui:15
+msgid "Summary"
+msgstr "Реферат"
+
+#: src/pages/summary_screen.ui:21
+msgid "Timezone and Locale"
+msgstr "Часовой пояс и локаль"
+
+#: src/pages/summary_screen.ui:27
+msgid "region/location"
+msgstr "регион/местонахождение"
+
+#: src/pages/summary_screen.ui:47
+msgid "Keyboard Layout"
+msgstr "Раскладка клавиатуры"
+
+#: src/pages/summary_screen.ui:53
+msgid "layout"
+msgstr "раскладка"
+
+#: src/pages/summary_screen.ui:73
+msgid "User Settings"
+msgstr "Настройки Пользователя"
+
+#: src/pages/summary_screen.ui:79
+msgid "username"
+msgstr "имя пользователя"
+
+#: src/pages/summary_screen.ui:91
+msgid "sudo enabled/disabled"
+msgstr "sudo включено/выключено"
+
+#: src/pages/summary_screen.ui:103
+msgid "root enabled/disabled"
+msgstr "root включено/выключено"
+
+#: src/pages/summary_screen.ui:122
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+#: src/pages/summary_screen.ui:128
+msgid "desktop"
+msgstr "рабочий стол"
+
+#: src/pages/summary_screen.ui:147
+msgid "Partition Settings"
+msgstr "Настройки Разделов"
+
+#: src/pages/summary_screen.ui:153
+msgid "selected install partition"
+msgstr "выбранный установочный раздел"
+
+#: src/pages/summary_screen.ui:166
+msgid "legacy bios/uefi"
+msgstr "старый/наследный bios/uefi"
+
+#: src/pages/summary_screen.ui:178
+msgid "Miscellaneous Settings"
+msgstr "Прочие Настройки"
+
+#: src/pages/summary_screen.ui:184
+msgid "ipv6 enabled/disabled"
+msgstr "ipv6 включен/выключен"
+
+#: src/pages/summary_screen.ui:196
+msgid "timeshift enabled/disabled"
+msgstr "таймшифт включен/выключен"
+
+#: src/pages/summary_screen.ui:208
+msgid "zramd enabled/disabled"
+msgstr "«zramd» включен/выключен"
+
+#: src/pages/summary_screen.ui:238 src/pages/timezone_screen.ui:59
+#: src/pages/user_screen.ui:83
+msgid "Move to next page"
+msgstr "Перейти на следующую страницу"
+
+#: src/pages/timezone_screen.ui:15
+msgid "Select Timezone"
+msgstr "Выбрать Часовой Пояс"
+
+#: src/pages/timezone_screen.ui:26
+msgid "Search for a timezone"
+msgstr "Поиск часового пояса"
+
+#: src/pages/user_screen.ui:15
+msgid "Create User"
+msgstr "Создать Пользователя"
+
+#: src/pages/user_screen.ui:16
+msgid "You can add additional users later."
+msgstr ""
+"Вы можете добавить больше пользователей в настройках установленной системы."
+
+#: src/pages/user_screen.ui:23
+msgid "Enter Username"
+msgstr "Введите Имя Пользователя"
+
+#: src/pages/user_screen.ui:28
+msgid "Enter Password"
+msgstr "Введите Пароль"
+
+#: src/pages/user_screen.ui:33
+msgid "Re-enter Password"
+msgstr "Повторно Введите Пароль"
+
+#: src/pages/user_screen.ui:44
+msgid "Enable Administrative Rights for User"
+msgstr "Включить Административные Права для Пользователя"
+
+#: src/pages/user_screen.ui:56
+msgid "Enable Superuser Account"
+msgstr "Включить Аккаунт Суперпользователя"

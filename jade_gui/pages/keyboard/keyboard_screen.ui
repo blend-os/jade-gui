@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="KeyboardScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="AdwStatusPage">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property
+              name="title"
+              translatable="true">Select Keyboard Layout</property>
+            <property name="description">You can add additional layouts later.</property>
+            <property name="css-classes">jade_compact</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="AdwPreferencesPage">
+                    <property name="margin-bottom">70</property>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="header-suffix">
+                          <object class="GtkButton" id="keyboard_search_button">
+                            <property
+                              name="tooltip-text"
+                              translatable="true">Search for your layout</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">loupe-symbolic</property>
+                                <property name="label" translatable="yes">_Search</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+                          </object>
+                        </property>
+
+                        <child>
+                          <object class="AdwComboRow">
+                            <property name="title" translatable="yes">Country</property>
+                            <property name="model">
+                              <object class="GtkStringList" id="country_preview_list">
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="AdwComboRow" id="variant_preview">
+                            <property name="title" translatable="yes">Variant</property>
+                            <property name="visible">false</property>
+                            <property name="model">
+                              <object class="GtkStringList" id="variant_preview_list">
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup" id="preview">
+                        <property name="title">Preview</property>
+
+                        <child>
+                          <object class="AdwEntryRow">
+                            <property name="title">Test your Keyboard</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

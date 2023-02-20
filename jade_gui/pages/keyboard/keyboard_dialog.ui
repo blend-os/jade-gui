@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+<requires lib="gtk" version="4.0"/>
+  <object class="GtkDialog" id="search_dialog">
+    <property name="default-height">600</property>
+    <property name="default-width">570</property>
+    <property name="title">Search Timezones</property>
+    <property name="hide-on-close">true</property>
+
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="vexpand">true</property>
+
+        <child>
+          <object class="GtkBox" id="keyboard_search">
+            <child>
+              <object class="GtkSearchEntry" id="keyboard_entry_search">
+                <property name="hexpand">true</property>
+                <property name="margin-end">30</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-start">30</property>
+                <property name="margin-top">30</property>
+                <property
+                  name="placeholder-text"
+                  translatable="true">Search for a keyboard layout</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesPage">
+            <child>
+              <object class="AdwPreferencesGroup">
+                <child>
+                  <object class="GtkListBox" id="layout_list">
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="select_variant_button">
+            <property name="label">Select</property>
+            <property name="margin-top">15</property>
+            <property name="margin-bottom">15</property>
+            <property name="margin-end">15</property>
+            <property name="margin-start">15</property>
+            <property name="valign">GTK_ALIGN_END</property>
+            <property name="vexpand">true</property>
+            <style>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkPopover" id="hamburger_menu">
+        <style>
+            <class name="menu"/>
+        </style>
+        <child>
+            <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+                <child>
+                    <object class="GtkModelButton" id="about_button">
+                        <property
+              name="text"
+              translatable="yes">About Jade GUI</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+  <template class="JadeGuiWindow" parent="GtkApplicationWindow">
+    <property name="title">Jade</property>
+    <property name="default-width">650</property>
+    <property name="default-height">700</property>
+    <property name="resizable">false</property>
+    <child type="titlebar">
+      <object class="AdwHeaderBar" id="header_bar">
+        <property name="title-widget">
+          <object class="GtkBox">
+            <child>
+              <object class="AdwCarouselIndicatorDots">
+                <property name="carousel">carousel</property>
+                <property name="orientation">horizontal</property>
+              </object>
+            </child>
+          </object>
+        </property>
+        <child type="end">
+          <object class="GtkMenuButton" id="menu_button">
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="popover">hamburger_menu</property>
+          </object>
+        </child>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="AdwCarousel" id="carousel">
+            <property name="orientation">horizontal</property>
+            <property name="vexpand">true</property>
+            <property name="hexpand">true</property>
+            <property name="allow-mouse-drag">false</property>
+            <property name="allow-scroll-wheel">false</property>
+            <property name="allow-long-swipes">false</property>
+            <property name="interactive">false</property>
+          </object>
+				</child>
+
+				<child>
+					<object class="GtkRevealer" id="revealer">
+						<property
+              name="transition-type">GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP</property>
+						<property name="reveal-child">False</property>
+
+						<child>
+							<object class="GtkBox">
+								<property name="margin-start">15</property>
+								<property name="margin-end">15</property>
+								<property name="margin-bottom">15</property>
+								<property name="margin-top">15</property>
+								<property name="homogeneous">true</property>
+
+								<child>
+									<object class="GtkButton" id="back_button">
+										<property name="label">Back</property>
+										<property name="halign">start</property>
+										<property name="valign">start</property>
+										<property
+                      name="tooltip-text"
+                      translatable="true">Move to previous page</property>
+									</object>
+								</child>
+
+								<child>
+									<object class="GtkButton" id="next_button">
+										<property name="label">Next</property>
+										<property name="halign">end</property>
+										<property name="valign">end</property>
+										<property name="tooltip-text" translatable="true">Move to next page</property>
+										<property name="sensitive">False</property>
+										<style>
+											<class name="suggested-action"/>
+										</style>
+									</object>
+								</child>
+							</object>
+						</child>
+					</object>
+				</child>
+      </object>
+    </child>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label">Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label">About jade gui</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

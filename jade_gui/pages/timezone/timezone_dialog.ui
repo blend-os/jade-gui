@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+<requires lib="gtk" version="4.0"/>
+  <object class="GtkDialog" id="search_dialog">
+    <property name="default-height">600</property>
+    <property name="default-width">570</property>
+    <property name="title">Search Timezones</property>
+    <property name="hide-on-close">true</property>
+
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+
+        <child>
+          <object class="GtkBox" id="timezone_search">
+            <child>
+              <object class="GtkSearchEntry" id="timezone_entry_search">
+                <property name="hexpand">true</property>
+                <property name="margin-end">30</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-start">30</property>
+                <property name="margin-top">30</property>
+                <property
+                  name="placeholder-text"
+                  translatable="true">Search for a timezone</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesPage">
+            <child>
+              <object class="AdwPreferencesGroup">
+                <child>
+                  <object class="GtkListBox" id="timezone_list">
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

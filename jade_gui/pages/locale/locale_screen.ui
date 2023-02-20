@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="LocaleScreen" parent="AdwBin">
+    <property name="hexpand">true</property>
+    <property name="vexpand">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="AdwStatusPage" id="status_page">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="css-classes">jade_compact</property>
+            <property
+              name="title"
+              translatable="true">Select Locale</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="AdwPreferencesPage">
+                    <property name="margin-bottom">70</property>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="header-suffix">
+                          <object class="GtkButton" id="locale_search_button">
+                            <property
+                              name="tooltip-text"
+                              translatable="true">Search for your locale</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                            <property name="child">
+                              <object class="AdwButtonContent">
+                                <property name="icon-name">loupe-symbolic</property>
+                                <property name="label" translatable="yes">_Search</property>
+                                <property name="use-underline">True</property>
+                              </object>
+                            </property>
+                          </object>
+                        </property>
+
+                        <child>
+                          <object class="AdwComboRow">
+                            <property name="title" translatable="yes">Main Locale</property>
+                            <property name="model">
+                              <object class="GtkStringList" id="main_locale_list">
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="AdwExpanderRow" id="other_locale_list">
+                            <property name="title" translatable="yes">Additional Locales</property>
+                            <property name="subtitle" translatable="yes">Additional locales that will be installed</property>
+                            <property name="expanded">true</property>
+                            <child>
+                              <object class="AdwActionRow" id="empty_locales">
+                                <property name="subtitle">No additional locales selected</property>
+                                <property name="valign">center</property>
+                                <property name="vexpand">true</property>
+                                <property name="hexpand">true</property>
+                                <property name="halign">center</property>
+                                <style>
+                                  <class name="emptyLocales"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="visible">true</property>
+                        <child>
+                          <object class="AdwActionRow" id="date_preview">
+                            <property name="title">Date and time</property>
+                            <child>
+                              <object class="GtkLabel" id="datespreview">
+                                <property name="label">timehere</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="number_preview">
+                            <property name="title">Numbers and currency</property>
+                            <child>
+                              <object class="GtkLabel" id="numberpreview">
+                                <property name="label">numberhere  -  currencyhere</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
