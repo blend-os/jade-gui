@@ -33,7 +33,6 @@ class InstallPrefs:
         enable_sudo,
         disk,
         hostname,
-        ipv_enabled,
         timeshift_enabled,
         zramd_enabled,
         desktop,
@@ -52,7 +51,6 @@ class InstallPrefs:
         else:
             self.disk = ""
         self.hostname = hostname if len(hostname) != 0 else "crystal"
-        self.ipv_enabled = ipv_enabled
         self.timeshift_enabled = timeshift_enabled
         self.zramd_enabled = zramd_enabled
         self.desktop = desktop
@@ -79,7 +77,7 @@ class InstallPrefs:
                 "keymap": self.layout.country_shorthand,
                 "timezone": self.timezone.region + "/" + self.timezone.location,
             },
-            "networking": {"hostname": self.hostname, "ipv6": self.ipv_enabled},
+            "networking": {"hostname": self.hostname, "ipv6": False},
             "users": [
                 {
                     "name": self.username,

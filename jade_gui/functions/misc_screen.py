@@ -27,7 +27,7 @@ class MiscScreen(JadeScreen, Adw.Bin):
     __gtype_name__ = "MiscScreen"
 
     hostname_entry = Gtk.Template.Child()
-    ipv_switch = Gtk.Template.Child()
+    #ipv_switch = Gtk.Template.Child()
     timeshift_switch = Gtk.Template.Child()
     zramd_switch = Gtk.Template.Child()
 
@@ -46,6 +46,6 @@ class MiscScreen(JadeScreen, Adw.Bin):
 
     def on_complete(self, *_):
         self.hostname = self.hostname_entry.get_text()
-        self.ipv_enabled = self.ipv_switch.get_state()
+        #self.ipv_enabled = self.ipv_switch.get_state()
         self.zramd_enabled = self.zramd_switch.get_state()
         self.timeshift_enabled = self.timeshift_switch.get_state()
