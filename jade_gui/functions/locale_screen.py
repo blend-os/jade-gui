@@ -63,7 +63,6 @@ class LocaleScreen(JadeScreen, Adw.Bin):
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         )
 
-
         builder = Gtk.Builder.new_from_resource(
             "/al/getcryst/jadegui/pages/locale/locale_dialog.ui"
         )
@@ -82,6 +81,7 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         self.locale_search_button.connect("clicked", self.present_dialog)
 
         self._locale_list_length = 1
+        self.chosen_locales = [self.window.timezone_screen.chosen_timezone.locale]
 
         en_US = LocaleEntry(
             page=self,
