@@ -38,24 +38,6 @@
                             <property name="selectable">false</property>
                             <property
                               name="title"
-                              translatable="true">IPv6 loopback</property>
-                            <property
-                              name="subtitle"
-                              translatable="true">This can fix IPv6 connectivity issues with some ISPs.</property>
-                            <child>
-                              <object class="GtkSwitch" id="ipv_switch">
-                                <property name="valign">center</property>
-                                <property name="state">false</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwActionRow">
-                            <property name="activatable">false</property>
-                            <property name="selectable">false</property>
-                            <property
-                              name="title"
                               translatable="true">Timeshift</property>
                             <property
                               name="subtitle"

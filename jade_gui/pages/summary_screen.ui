@@ -224,21 +224,6 @@
                       <object class="GtkListBox" id="misc_listbox">
                         <property name="selection-mode">none</property>
                         <child>
-                          <object class="AdwActionRow" id="ipv_label">
-                            <property
-                              name="title"
-                              translatable="true">ipv6 enabled/disabled</property>
-                            <child>
-                              <object class="GtkButton" id="ipv_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
                           <object class="AdwActionRow" id="timeshift_label">
                             <property
                               name="title"

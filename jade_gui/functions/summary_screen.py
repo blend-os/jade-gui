@@ -46,8 +46,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
     partition_label = Gtk.Template.Child()
     partition_button = Gtk.Template.Child()
     uefi_label = Gtk.Template.Child()
-    ipv_label = Gtk.Template.Child()
-    ipv_button = Gtk.Template.Child()
     timeshift_label = Gtk.Template.Child()
     timeshift_button = Gtk.Template.Child()
     zramd_label = Gtk.Template.Child()
@@ -91,9 +89,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         )
         self.partition_button.connect(
             "clicked", self.window.show_page, self.window.partition_screen
-        )
-        self.ipv_button.connect(
-            "clicked", self.window.show_page, self.window.misc_screen
         )
         self.timeshift_button.connect(
             "clicked", self.window.show_page, self.window.misc_screen
@@ -149,9 +144,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             )
         self.uefi_label.set_title("UEFI" if disks.get_uefi() else "Legacy BIOS")
 
-        self.ipv_label.set_title(
-            "ipv6 enabled" if self.window.misc_screen.ipv_enabled else "ipv6 disabled"
-        )
         self.timeshift_label.set_title(
             "timeshift enabled"
             if self.window.misc_screen.timeshift_enabled
@@ -181,7 +173,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             enable_sudo=self.window.user_screen.sudo_enabled,
             disk=self.window.partition_screen.selected_partition,
             hostname=self.window.misc_screen.hostname,
-            ipv_enabled=self.window.misc_screen.ipv_enabled,
             timeshift_enabled=self.window.misc_screen.timeshift_enabled,
             zramd_enabled=self.window.misc_screen.zramd_enabled,
             desktop=self.window.desktop_screen.chosen_desktop,
