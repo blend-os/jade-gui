@@ -91,7 +91,7 @@ class PartitionScreen(JadeScreen, Adw.Bin):
     def switch_manual_partitioning(self, widget):
         self.automatic_partitioning_page.set_visible(False)
         self.manual_partitioning_page.set_visible(True)
-        self.set_valid(False)
+        self.set_valid(True)
         self.window.partition_mode = "Manual"
 
     def row_selected(self, widget, row):
