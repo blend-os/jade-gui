@@ -46,7 +46,7 @@
 
                         <child>
                           <object class="AdwComboRow">
-                            <property name="title" translatable="yes">Country</property>
+                            <property name="title" translatable="yes">Region</property>
                             <property name="model">
                               <object class="GtkStringList" id="country_preview_list">
                               </object>
