@@ -46,7 +46,7 @@ class WelcomeScreen(JadeScreen, Adw.Bin):
     def check_internet(self):
         while self.do_check_internet:
             try:
-                urllib.request.urlopen("https://getcryst.al", timeout=1)
+                urllib.request.urlopen("https://ping.archlinux.org", timeout=1)
                 self.online()
                 if not self.next_button.get_sensitive():
                     GLib.idle_add(self.allow_continue, True)
