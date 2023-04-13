@@ -361,7 +361,7 @@ keymaps = [
         ],
     ),
     Keymap(
-        layout="Great Britian",
+        layout="Great Britain",
         backend_layout="gb",
         variants=[
             "normal",
