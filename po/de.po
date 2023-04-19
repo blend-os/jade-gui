@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Crystal Linux installieren"
+msgid "Install blendOS"
+msgstr "blendOS installieren"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "Über Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Wilkommen in Crystal Linux"
+msgid "Welcome to blendOS"
+msgstr "Wilkommen in blendOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Drücken sie Start um Crystal Linux zu installieren!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Drücken sie Start um blendOS zu installieren!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,16 +58,16 @@ msgid "Installation Completed!"
 msgstr "Installation abgeschlossen!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Starten sie ihr Gerät neu um Crystal Linux zu benutzen!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Starten sie ihr Gerät neu um blendOS zu benutzen!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Neu Starten"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Crystal Installieren"
+msgid "Installing blendOS"
+msgstr "blendOS Installieren"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -122,7 +122,7 @@ msgstr "Erstellt einen komprimierten Bereich von Swap im RAM."
 
 #: src/pages/partition_screen.ui:26
 msgid "Select partitions to install to"
-msgstr "Wählen sie die Partition aus, auf der Crystal installiert werden soll"
+msgstr "Wählen sie die Partition aus, auf der blendOS installiert werden soll"
 
 #: src/pages/partition_screen.ui:27
 msgid "Make sure to have at least one root partition"
@@ -154,10 +154,10 @@ msgstr "Festplatte zum installieren auswählen"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Wählen sie die Festplatte aus, auf der Crystal Linux installiert werden "
+"Wählen sie die Festplatte aus, auf der blendOS installiert werden "
 "soll. Dies wird alle Daten auf der Festplatte löschen."
 
 #: src/pages/partition_screen.ui:107

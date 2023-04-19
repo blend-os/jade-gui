@@ -31,11 +31,11 @@ class MiscScreen(JadeScreen, Adw.Bin):
     timeshift_switch = Gtk.Template.Child()
     zramd_switch = Gtk.Template.Child()
 
-    hostname = "crystal"
+    hostname = "blend"
     ipv_enabled = False
     zramd_enabled = False
-    timeshift_enabled = True
-    zramd_enabled = True
+    timeshift_enabled = False
+    zramd_enabled = False
     move_to_summary = False
 
     def __init__(self, window, application, **kwargs):
@@ -46,6 +46,3 @@ class MiscScreen(JadeScreen, Adw.Bin):
 
     def on_complete(self, *_):
         self.hostname = self.hostname_entry.get_text()
-        #self.ipv_enabled = self.ipv_switch.get_state()
-        self.zramd_enabled = self.zramd_switch.get_state()
-        self.timeshift_enabled = self.timeshift_switch.get_state()

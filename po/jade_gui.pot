@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Install Crystal Linux"
+msgid "Install blendOS"
+msgstr "Install blendOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -30,12 +30,12 @@ msgid "About Jade GUI"
 msgstr "About Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Welcome to Crystal Linux"
+msgid "Welcome to blendOS"
+msgstr "Welcome to blendOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Press Start to start installing Crystal Linux!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Press Start to start installing blendOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -56,16 +56,16 @@ msgid "Installation Completed!"
 msgstr "Installation Completed!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Reboot the device to start using Crystal Linux!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Reboot the device to start using blendOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Reboot"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Installing Crystal"
+msgid "Installing blendOS"
+msgstr "Installing blendOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -84,8 +84,8 @@ msgid "Select additional locales to enable"
 msgstr "Select additional locales to enable"
 
 #: src/pages/misc_screen.ui:15
-msgid "Miscellaneous"
-msgstr "Miscellaneous"
+msgid "Hostname"
+msgstr "Hostname"
 
 #: src/pages/misc_screen.ui:22
 msgid "Custom Hostname"
@@ -149,10 +149,10 @@ msgstr "Select Installation Disk"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 
 #: src/pages/partition_screen.ui:107

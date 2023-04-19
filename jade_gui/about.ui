@@ -6,18 +6,20 @@
     <property name="application-icon">al.getcryst.jadegui</property>
     <property name="modal">True</property>
     <property name="version">1.9.0</property>
-    <property name="comments">Easily install Crystal Linux</property>
-    <property name="website">https://getcryst.al</property>
+    <property name="comments">Easily install blendOS</property>
+    <property name="website">https://blendos.co</property>
     <property
-      name="issue-url">https://git.getcryst.al/crystal/software/jade-gui/-/issues</property>
+      name="issue-url">https://github.com/blend-os/jade-gui/issues</property>
     <property name="license-type">gpl-3-0-only</property>
-    <property name="developer-name">Crystal Linux dev team</property>
+    <property name="developer-name">Crystal Linux</property>
     <property name="developers">axtlos https://github.com/axtloss
 marshmallow https://marsh.town
 Matt https://github.com/SomethingGeneric
 Michal https://github.com/not-my-segfault
 Mirko Brombin https://github.com/mirkobrombin
-Hari Rana (TheEvilSkeleton) https://theevilskeleton.gitlab.io/</property>
-    <property name="artists">jasio https://github.com/hericiumvevo</property>
+Hari Rana (TheEvilSkeleton) https://theevilskeleton.gitlab.io/
+Rudra Saraswat (rs2009) https://about.ruds.io</property>
+    <property name="artists">jasio https://github.com/hericiumvevo
+Rudra Saraswat (rs2009) https://about.ruds.io</property>
   </object>
 </interface>

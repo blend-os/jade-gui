@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Installa Crystal Linux"
+msgid "Install blendOS"
+msgstr "Installa blendOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "Su Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Benvenuto su Crystal Linux"
+msgid "Welcome to blendOS"
+msgstr "Benvenuto su blendOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Premi Inizia per installare Crystal Linux!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Premi Inizia per installare blendOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,16 +58,16 @@ msgid "Installation Completed!"
 msgstr "Installazione completata!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Riavvia il dispositivo per iniziare a usare Crystal Linux!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Riavvia il dispositivo per iniziare a usare blendOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Riavvia"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Installando Crystal"
+msgid "Installing blendOS"
+msgstr "Installando blendOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -152,10 +152,10 @@ msgstr "Seleziona disco di installazione"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Selezionare il disco su cui si desidera installare Crystal Linux. Questa "
+"Selezionare il disco su cui si desidera installare blendOS. Questa "
 "operazione cancellerà l'intero disco selezionato."
 
 #: src/pages/partition_screen.ui:107

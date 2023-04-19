@@ -37,19 +37,9 @@ class SummaryScreen(JadeScreen, Adw.Bin):
     keyboard_button = Gtk.Template.Child()
     username_label = Gtk.Template.Child()
     username_button = Gtk.Template.Child()
-    sudo_label = Gtk.Template.Child()
-    sudo_button = Gtk.Template.Child()
-    root_label = Gtk.Template.Child()
-    root_button = Gtk.Template.Child()
-    desktop_label = Gtk.Template.Child()
-    desktop_button = Gtk.Template.Child()
     partition_label = Gtk.Template.Child()
     partition_button = Gtk.Template.Child()
     uefi_label = Gtk.Template.Child()
-    timeshift_label = Gtk.Template.Child()
-    timeshift_button = Gtk.Template.Child()
-    zramd_label = Gtk.Template.Child()
-    zramd_button = Gtk.Template.Child()
     added_locales = []
     # unakite_label = Gtk.Template.Child()
 
@@ -78,23 +68,8 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         self.username_button.connect(
             "clicked", self.window.show_page, self.window.user_screen
         )
-        self.sudo_button.connect(
-            "clicked", self.window.show_page, self.window.user_screen
-        )
-        self.root_button.connect(
-            "clicked", self.window.show_page, self.window.user_screen
-        )
-        self.desktop_button.connect(
-            "clicked", self.window.show_page, self.window.desktop_screen
-        )
         self.partition_button.connect(
             "clicked", self.window.show_page, self.window.partition_screen
-        )
-        self.timeshift_button.connect(
-            "clicked", self.window.show_page, self.window.misc_screen
-        )
-        self.zramd_button.connect(
-            "clicked", self.window.show_page, self.window.misc_screen
         )
 
     def on_show(self):
@@ -123,14 +98,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         self.keyboard_label.set_subtitle(self.window.keyboard_screen.variant.variant)
 
         self.username_label.set_title(self.window.user_screen.username)
-        self.sudo_label.set_title(
-            "sudo enabled" if self.window.user_screen.sudo_enabled else "sudo disabled"
-        )
-        self.root_label.set_title(
-            "root enabled" if self.window.user_screen.root_enabled else "root disabled"
-        )
-
-        self.desktop_label.set_title(self.window.desktop_screen.chosen_desktop)
 
         if self.window.partition_mode == "Manual":
             self.partition_label.set_title("Manual partitioning selected")
@@ -144,16 +111,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             )
         self.uefi_label.set_title("UEFI" if disks.get_uefi() else "Legacy BIOS")
 
-        self.timeshift_label.set_title(
-            "timeshift enabled"
-            if self.window.misc_screen.timeshift_enabled
-            else "timeshift disabled"
-        )
-        self.zramd_label.set_title(
-            "zramd enabled"
-            if self.window.misc_screen.zramd_enabled
-            else "zramd disabled"
-        )
         # self.unakite_label.set_title("Unakite enabled "+"enabled" if self.window.misc_screen.)
 
         partitions = []
@@ -175,7 +132,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             hostname=self.window.misc_screen.hostname,
             timeshift_enabled=self.window.misc_screen.timeshift_enabled,
             zramd_enabled=self.window.misc_screen.zramd_enabled,
-            desktop=self.window.desktop_screen.chosen_desktop,
             partition_mode=self.window.partition_mode,
             partitions=partitions,
         )

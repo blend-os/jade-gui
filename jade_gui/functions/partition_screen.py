@@ -31,7 +31,6 @@ class PartitionScreen(JadeScreen, Adw.Bin):
     __gtype_name__ = "PartitionScreen"
 
     disk_list = Gtk.Template.Child()
-    open_bash = Gtk.Template.Child()
     open_gparted = Gtk.Template.Child()
     partition_list = Gtk.Template.Child()
     reload_partitions = Gtk.Template.Child()
@@ -52,14 +51,10 @@ class PartitionScreen(JadeScreen, Adw.Bin):
         self.automatic_partitioning.connect(
             "clicked", self.switch_automatic_partitioning
         )
-        self.open_bash.connect("clicked", self.bash)
         self.open_gparted.connect("clicked", self.gparted)
 
     def gparted(self, widget):
         CommandUtils.run_command(["pkexec", "gparted"])
-
-    def bash(self, widget):
-        CommandUtils.run_command(["kgx", "-e", "/usr/bin/bash"])
 
     def check_partitions(self, widget):
         self.partition_list.select_all()

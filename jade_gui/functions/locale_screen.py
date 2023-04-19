@@ -56,7 +56,7 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         self.window = window
         self.application = application
         self.kwargs = kwargs
-        self.style_provider.load_from_data(".emptyLocales { font-style: italic; font-size: 15px; }", -1)
+        self.style_provider.load_from_data(b".emptyLocales { font-style: italic; font-size: 15px; }")
         Gtk.StyleContext.add_provider(
             self.empty_locales.get_style_context(),
             self.style_provider,

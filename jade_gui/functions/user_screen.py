@@ -31,8 +31,6 @@ class UserScreen(JadeScreen, Adw.Bin):
     username_entry = Gtk.Template.Child()
     password_entry = Gtk.Template.Child()
     password_confirmation = Gtk.Template.Child()
-    enable_sudo_switch = Gtk.Template.Child()
-    enable_root_switch = Gtk.Template.Child()
 
     username = ""
     sudo_enabled = True
@@ -46,18 +44,14 @@ class UserScreen(JadeScreen, Adw.Bin):
         self.window = window
         self.sudo_enabled = True
         self.root_enabled = True
-        self.enable_root_switch.set_active(self.root_enabled)
-        self.enable_sudo_switch.set_active(self.sudo_enabled)
         self.username_entry.connect("changed", self.username_passes_regex)
-        self.enable_root_switch.connect("state-set", self.enable_root_user)
-        self.enable_sudo_switch.connect("state-set", self.enable_sudo)
         self.password_entry.connect("changed", self.verify_password)
         self.password_confirmation.connect("changed", self.verify_password)
 
     def username_passes_regex(self, widget):
         input = self.username_entry.get_text()
         print(input)
-        if not re.search("^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$", input):
+        if not re.search("^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$", input) or input == 'blend':
             print("Invalid username!")
             self.username_entry.add_css_class("error")
             self.username_filled = False
@@ -68,28 +62,6 @@ class UserScreen(JadeScreen, Adw.Bin):
             self.username_filled = True
             self.verify_continue()
             self.username = input
-
-    def enable_root_user(self, widget, switch_state):
-        print("root")
-        print(self.root_enabled)
-        print(switch_state)
-        if switch_state == False and not self.sudo_enabled:
-            self.root_enabled = switch_state
-            self.sudo_enabled = not switch_state
-            self.enable_sudo_switch.set_active(not switch_state)
-        else:
-            self.root_enabled = switch_state
-
-    def enable_sudo(self, widget, switch_state):
-        print("sudo")
-        print(self.root_enabled)
-        print(switch_state)
-        if switch_state == False and not self.root_enabled:
-            self.sudo_enabled = switch_state
-            self.root_enabled = not switch_state
-            self.enable_root_switch.set_active(not switch_state)
-        else:
-            self.sudo_enabled = switch_state
 
     def verify_password(self, widget):
         if (

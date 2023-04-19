@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Crystal Linux'u Kurun"
+msgid "Install blendOS"
+msgstr "blendOS'u Kurun"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "Jade GUI Hakkında"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Crystal Linux'a Hoş Geldiniz"
+msgid "Welcome to blendOS"
+msgstr "blendOS'a Hoş Geldiniz"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Crystal Linux'u kurmaya başlamak için Başlat'a basın!"
+msgid "Press Start to start installing blendOS!"
+msgstr "blendOS'u kurmaya başlamak için Başlat'a basın!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,16 +58,16 @@ msgid "Installation Completed!"
 msgstr "Kurulum Tamamlandı!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Crystal Linux'u kullanmaya başlamak için cihazı yeniden başlatın!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "blendOS'u kullanmaya başlamak için cihazı yeniden başlatın!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Yeniden başlat"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Crystal Kuruluyor"
+msgid "Installing blendOS"
+msgstr "blendOS Kuruluyor"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -153,10 +153,10 @@ msgstr "Kurulum Diskini Seçin"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Crystal Linux'u kurmak istediğiniz diski seçin. Bu, seçtiğiniz diski tamamen "
+"blendOS'u kurmak istediğiniz diski seçin. Bu, seçtiğiniz diski tamamen "
 "temizleyecektir."
 
 #: src/pages/partition_screen.ui:107

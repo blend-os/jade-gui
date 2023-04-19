@@ -21,8 +21,8 @@ msgstr ""
 "X-Generator: Weblate 4.14\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Установить Crystal Linux"
+msgid "Install blendOS"
+msgstr "Установить blendOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -33,12 +33,12 @@ msgid "About Jade GUI"
 msgstr "О графическом интерфейсе Jade"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Добро пожаловать в Crystal Linux"
+msgid "Welcome to blendOS"
+msgstr "Добро пожаловать в blendOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Нажмите Start, чтобы начать установку Crystal Linux!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Нажмите Start, чтобы начать установку blendOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -59,16 +59,16 @@ msgid "Installation Completed!"
 msgstr "Установка завершена!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Перезагрузите устройство, чтобы начать использовать Crystal Linux!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Перезагрузите устройство, чтобы начать использовать blendOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Перезагрузить"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Установка Crystal"
+msgid "Installing blendOS"
+msgstr "Установка blendOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -156,10 +156,10 @@ msgstr "Выбрать Установочный Диск"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Выберите диск, на который Вы хотите установить Crystal Linux. Это приведет к "
+"Выберите диск, на который Вы хотите установить blendOS. Это приведет к "
 "стиранию всего выбранного Вами диска."
 
 #: src/pages/partition_screen.ui:107

@@ -110,66 +110,6 @@
                             </child>
                           </object>
                         </child>
-                        <child>
-                          <object class="AdwActionRow" id="sudo_label">
-                            <property
-                              name="title"
-                              translatable="true">sudo enabled/disabled</property>
-                            <child>
-                              <object class="GtkButton" id="sudo_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwActionRow" id="root_label">
-                            <property
-                              name="title"
-                              translatable="true">root enabled/disabled</property>
-                            <child>
-                              <object class="GtkButton" id="root_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <style>
-                          <class name="boxed-list"/>
-                        </style>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwPreferencesGroup">
-                    <property
-                      name="title"
-                      translatable="true">Desktop</property>
-                    <child>
-                      <object class="GtkListBox" id="desktop_listbox">
-                        <property name="selection-mode">none</property>
-                        <child>
-                          <object class="AdwActionRow" id="desktop_label">
-                            <property
-                              name="title"
-                              translatable="true">desktop</property>
-                            <child>
-                              <object class="GtkButton" id="desktop_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
                         <style>
                           <class name="boxed-list"/>
                         </style>
@@ -206,51 +146,6 @@
                             <property
                               name="title"
                               translatable="true">legacy bios/uefi</property>
-                          </object>
-                        </child>
-                        <style>
-                          <class name="boxed-list"/>
-                        </style>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="AdwPreferencesGroup">
-                    <property
-                      name="title"
-                      translatable="true">Miscellaneous Settings</property>
-                    <child>
-                      <object class="GtkListBox" id="misc_listbox">
-                        <property name="selection-mode">none</property>
-                        <child>
-                          <object class="AdwActionRow" id="timeshift_label">
-                            <property
-                              name="title"
-                              translatable="true">timeshift enabled/disabled</property>
-                            <child>
-                              <object class="GtkButton" id="timeshift_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwActionRow" id="zramd_label">
-                            <property
-                              name="title"
-                              translatable="true">zramd enabled/disabled</property>
-                            <child>
-                              <object class="GtkButton" id="zramd_button">
-                                <property name="valign">center</property>
-                                <property name="halign">center</property>
-                                <property
-                                  name="icon-name">document-edit-symbolic</property>
-                              </object>
-                            </child>
                           </object>
                         </child>
                         <style>

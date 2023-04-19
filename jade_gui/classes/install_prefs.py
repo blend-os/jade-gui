@@ -35,7 +35,6 @@ class InstallPrefs:
         hostname,
         timeshift_enabled,
         zramd_enabled,
-        desktop,
         partition_mode,
         partitions,
     ):
@@ -53,7 +52,6 @@ class InstallPrefs:
         self.hostname = hostname if len(hostname) != 0 else "crystal"
         self.timeshift_enabled = timeshift_enabled
         self.zramd_enabled = zramd_enabled
-        self.desktop = desktop
         self.partition_mode = partition_mode
         self.partitions = partitions
         self.is_efi = disks.get_uefi()
@@ -82,23 +80,10 @@ class InstallPrefs:
                 {
                     "name": self.username,
                     "password": self.password,
-                    "hasroot": self.enable_sudo,
                     "shell": "bash",
                 }
             ],
-            "rootpass": self.password,
-            "desktop": self.desktop.lower(),
-            "timeshift": self.timeshift_enabled,
-            "extra_packages": ["firefox"],
             "flatpak": True,
-            "zramd": self.zramd_enabled,
-            "unakite": {
-                "enable": False,
-                "root": "/dev/null",
-                "oldroot": self.disk,
-                "efidir": "/dev/null",
-                "bootdev": "/dev/null",
-            },
             "kernel": "linux",
         }
         return json.dumps(prefs)

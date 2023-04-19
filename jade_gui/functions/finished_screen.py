@@ -1,4 +1,4 @@
-# desktop_screen.py
+# finished_screen.py
 
 #
 # Copyright 2022 user
@@ -79,7 +79,7 @@ class FinishedScreen(JadeScreen, Adw.Bin):
         self.set_valid(True)
 
     def reboot(self, widget):
-        CommandUtils.run_command(["gnome-session-quit", "--reboot"])
+        CommandUtils.run_command(["reboot"])
 
     def output(self, widget):
         with open("/tmp/jade-gui-output.txt", "r") as f:

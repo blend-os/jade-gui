@@ -14,7 +14,7 @@
             <property name="vexpand">true</property>
             <property
               name="title"
-              translatable="true">Installing Crystal</property>
+              translatable="true">Installing blendOS</property>
             <property
               name="description"
               translatable="true">This may take some time.</property>

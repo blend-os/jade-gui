@@ -21,14 +21,12 @@ import time
 import socket
 from gi.repository import Gtk, Gdk, GLib, Adw
 from jade_gui.classes.partition import Partition
-from jade_gui.widgets.desktop import DesktopEntry
 from jade_gui.widgets.disk import DiskEntry
 from jade_gui.widgets.partition import PartitionEntry
 from jade_gui.functions.keyboard_screen import KeyboardScreen
 from jade_gui.functions.timezone_screen import TimezoneScreen
 from jade_gui.functions.locale_screen import LocaleScreen
 from jade_gui.functions.user_screen import UserScreen
-from jade_gui.functions.desktop_screen import DesktopScreen
 from jade_gui.functions.misc_screen import MiscScreen
 from jade_gui.functions.partition_screen import PartitionScreen
 from jade_gui.functions.summary_screen import SummaryScreen
@@ -38,7 +36,6 @@ from jade_gui.functions.welcome_screen import WelcomeScreen
 from jade_gui.classes.jade_screen import JadeScreen
 from jade_gui.locales.locales_list import locations
 from jade_gui.keymaps import keymaps
-from jade_gui.desktops import desktops
 from jade_gui.utils import disks
 from jade_gui.utils.threading import RunAsync
 
@@ -70,9 +67,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
             window=self, set_valid=self.page_valid, **kwargs
         )
         self.misc_screen = MiscScreen(window=self, set_valid=self.page_valid, **kwargs)
-        self.desktop_screen = DesktopScreen(
-            window=self, set_valid=self.page_valid, **kwargs
-        )
         self.user_screen = UserScreen(window=self, set_valid=self.page_valid, **kwargs)
         self.keyboard_screen = KeyboardScreen(
             window=self, set_valid=self.page_valid, keymaps=keymaps, **kwargs
@@ -99,7 +93,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.carousel.append(self.timezone_screen)
         self.carousel.append(self.locale_screen)
         self.carousel.append(self.user_screen)
-        self.carousel.append(self.desktop_screen)
         self.carousel.append(self.misc_screen)
         self.carousel.append(self.partition_screen)
         # self.carousel.append(self.manual_partition)
@@ -115,27 +108,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
 
         self.next_button.connect("clicked", self.next)
         self.back_button.connect("clicked", self.back)
-
-        ### Test desktops
-        firstdesktop = DesktopEntry(
-            window=self, desktop=desktops[0], button_group=None, **kwargs
-        )  # Manually specifying onyx since the other entries need a button group to attach to
-        self.desktop_screen.list_desktops.append(firstdesktop)
-        self.desktop_screen.chosen_desktop = (
-            self.desktop_screen.list_desktops.get_row_at_index(0).get_title()
-        )
-        self.desktop_screen.list_desktops.select_row(firstdesktop)
-        for desktop in desktops:
-            if desktop != desktops[0]:
-                self.desktop_screen.list_desktops.append(
-                    DesktopEntry(
-                        window=self,
-                        desktop=desktop,
-                        button_group=firstdesktop.select_button,
-                        **kwargs
-                    )
-                )
-        ### ---------
 
         ### Test partitions
         self.available_disks = disks.get_disks()
@@ -242,7 +214,7 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
             transient_for=self,
             modal=True,
             parent=self,
-            text="Do you want to try\nCrystal without installing?",
+            text="Do you want to try\nblendOS without installing?",
             buttons=Gtk.ButtonsType.YES_NO,
         )
         dialog.connect("response", handle_response)

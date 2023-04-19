@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Installera Crystal Linux"
+msgid "Install blendOS"
+msgstr "Installera blendOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "Om Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Välkommen till Crystal Linux"
+msgid "Welcome to blendOS"
+msgstr "Välkommen till blendOS"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Tryck på Start för att börja installera Crystal Linux!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Tryck på Start för att börja installera blendOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,16 +58,16 @@ msgid "Installation Completed!"
 msgstr "Installation slutförd!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Starta om enheten för att börja använda Crystal Linux!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Starta om enheten för att börja använda blendOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Starta om"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Installerar Crystal"
+msgid "Installing blendOS"
+msgstr "Installerar blendOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -151,9 +151,9 @@ msgstr "Välj disk att installera till"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
-msgstr "Välj den disk du vill installera Crystal Linux på. Detta kommer att rensa hela disken du valde."
+msgstr "Välj den disk du vill installera blendOS på. Detta kommer att rensa hela disken du valde."
 
 #: src/pages/partition_screen.ui:107
 msgid "Switch to manual partitioning"

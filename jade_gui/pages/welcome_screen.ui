@@ -23,10 +23,10 @@
 
         <child>
           <object class="AdwStatusPage">
-            <property name="title" translatable="yes">Welcome to Crystal Linux</property>
+            <property name="title" translatable="yes">Welcome to blendOS</property>
             <property
               name="description"
-              translatable="yes">Press Start to start installing Crystal Linux!</property>
+              translatable="yes">Press Start to start installing blendOS!</property>
           </object>
         </child>
 

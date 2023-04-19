@@ -17,7 +17,7 @@
               translatable="true">Installation Completed!</property>
             <property
               name="description"
-              translatable="true">Reboot the device to start using Crystal Linux!</property>
+              translatable="true">Reboot the device to start using blendOS!</property>
             <property name="icon-name">al.getcryst.jadegui</property>
             <property name="css-classes">jade_compact</property>
             <child>

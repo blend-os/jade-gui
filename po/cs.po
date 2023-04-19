@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 4.14.2\n"
 
 #: data/al.getcryst.jadegui.desktop.in:3
-msgid "Install Crystal Linux"
-msgstr "Instalovat Crystal Linux"
+msgid "Install blendOS"
+msgstr "Instalovat blendOS"
 
 #: data/al.getcryst.jadegui.appdata.xml.in:7
 msgid "No description"
@@ -32,12 +32,12 @@ msgid "About Jade GUI"
 msgstr "O Jade GUI"
 
 #: src/window.ui:85
-msgid "Welcome to Crystal Linux"
-msgstr "Vítejte v Crystal Linux(u)"
+msgid "Welcome to blendOS"
+msgstr "Vítejte v blendOS(u)"
 
 #: src/window.ui:86
-msgid "Press Start to start installing Crystal Linux!"
-msgstr "Zmáčkněte start, a započněte instalaci Crystal Linux!"
+msgid "Press Start to start installing blendOS!"
+msgstr "Zmáčkněte start, a započněte instalaci blendOS!"
 
 #: src/pages/desktop_screen.ui:13
 msgid "Select Desktop"
@@ -58,16 +58,16 @@ msgid "Installation Completed!"
 msgstr "Instalace dokončena!"
 
 #: src/pages/finished_screen.ui:16
-msgid "Reboot the device to start using Crystal Linux!"
-msgstr "Restartujte zařízení a začněte používat Crystal Linux!"
+msgid "Reboot the device to start using blendOS!"
+msgstr "Restartujte zařízení a začněte používat blendOS!"
 
 #: src/pages/finished_screen.ui:28
 msgid "Reboot"
 msgstr "Restartovat"
 
 #: src/pages/install_screen.ui:15
-msgid "Installing Crystal"
-msgstr "Instaluji Crystal"
+msgid "Installing blendOS"
+msgstr "Instaluji blendOS"
 
 #: src/pages/install_screen.ui:16
 msgid "This may take some time"
@@ -152,11 +152,11 @@ msgstr "Vyberte instalační disk"
 
 #: src/pages/partition_screen.ui:97
 msgid ""
-"Select the disk you want to install Crystal Linux on. This will wipe the "
+"Select the disk you want to install blendOS on. This will wipe the "
 "entire disk you selected."
 msgstr ""
-"Vyberte disk na který chcete nainstalovat Crystal Linux. Ten se potom "
-"zformátuje, takže na něm nic nezbude kromě systému Crystal Linux."
+"Vyberte disk na který chcete nainstalovat blendOS. Ten se potom "
+"zformátuje, takže na něm nic nezbude kromě systému blendOS."
 
 #: src/pages/partition_screen.ui:107
 msgid "Switch to manual partitioning"

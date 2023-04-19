@@ -6,7 +6,6 @@ jade_gui_sources = [
     'timezone.py',
     'layout.py',
     'variant.py',
-    'desktop.py',
     'disk.py',
     'partition.py',
     'locale.py',

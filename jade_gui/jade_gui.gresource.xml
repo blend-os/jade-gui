@@ -6,12 +6,10 @@
     <file>widgets/timezone.ui</file>
     <file>widgets/layout.ui</file>
     <file>widgets/variant.ui</file>
-    <file>widgets/desktop.ui</file>
     <file>widgets/disk.ui</file>
     <file>widgets/partition.ui</file>
     <file>widgets/locale.ui</file>
     <file>widgets/selected_locale.ui</file>
-    <file>pages/desktop_screen.ui</file>
     <file>pages/finished_screen.ui</file>
     <file>pages/install_screen.ui</file>
     <file>pages/keyboard/keyboard_screen.ui</file>

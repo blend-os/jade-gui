@@ -63,13 +63,6 @@
                                       translatable="true">Open GParted</property>
                                   </object>
                                 </child>
-                                <child>
-                                  <object class="GtkButton" id="open_bash">
-                                    <property
-                                      name="label"
-                                      translatable="true">Open terminal</property>
-                                  </object>
-                                </child>
                               </object>
                             </child>
                           </object>
@@ -117,7 +110,7 @@
                   translatable="true">Select Installation Disk</property>
                 <property
                   name="description"
-                  translatable="true">Select the disk you want to install Crystal Linux on. This will wipe the entire disk you selected.</property>
+                  translatable="true">Select the disk you want to install blendOS on. This will wipe the entire disk you selected.</property>
                 <child>
                   <object class="AdwPreferencesPage">
                     <child>

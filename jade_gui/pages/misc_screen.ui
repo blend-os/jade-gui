@@ -13,7 +13,7 @@
           <object class="AdwStatusPage">
             <property name="hexpand">true</property>
             <property name="vexpand">true</property>
-            <property name="title" translatable="true">Miscellaneous</property>
+            <property name="title" translatable="true">Hostname</property>
             <property name="css-classes">jade_compact</property>
             <child>
               <object class="AdwPreferencesPage">
@@ -24,50 +24,6 @@
                         <property
                           name="title"
                           translatable="true">Custom Hostname</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkListBox">
-                        <property name="margin-top">7</property>
-                        <style>
-                          <class name="boxed-list"/>
-                        </style>
-                        <child>
-                          <object class="AdwActionRow">
-                            <property name="activatable">false</property>
-                            <property name="selectable">false</property>
-                            <property
-                              name="title"
-                              translatable="true">Timeshift</property>
-                            <property
-                              name="subtitle"
-                              translatable="true">Support snapshots as a means to roll back to earlier states of the system.</property>
-                            <child>
-                              <object class="GtkSwitch" id="timeshift_switch">
-                                <property name="valign">center</property>
-                                <property name="state">true</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwActionRow">
-                            <property name="activatable">false</property>
-                            <property name="selectable">false</property>
-                            <property
-                              name="title"
-                              translatable="true">Zramd</property>
-                            <property
-                              name="subtitle"
-                              translatable="true">Creates a compressed area of Swap in RAM.</property>
-                            <child>
-                              <object class="GtkSwitch" id="zramd_switch">
-                                <property name="valign">center</property>
-                                <property name="state">true</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
