@@ -84,10 +84,6 @@ class UserScreen(JadeScreen, Adw.Bin):
         self.set_valid(self.password_filled and self.username_filled)
 
     def encrypt_password(self, password):
-        command = subprocess.run(
-            [shutil.which("openssl"), "passwd", "-6", password], capture_output=True
-        )
-        password_encrypted = command.stdout.decode("utf-8").strip("\n")
         return password_encrypted
 
     def carousel_next_summary(self, widget):
