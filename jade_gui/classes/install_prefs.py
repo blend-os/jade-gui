@@ -33,8 +33,6 @@ class InstallPrefs:
         enable_sudo,
         disk,
         hostname,
-        timeshift_enabled,
-        zramd_enabled,
         partition_mode,
         partitions,
     ):
@@ -50,8 +48,6 @@ class InstallPrefs:
         else:
             self.disk = ""
         self.hostname = hostname if len(hostname) != 0 else "crystal"
-        self.timeshift_enabled = timeshift_enabled
-        self.zramd_enabled = zramd_enabled
         self.partition_mode = partition_mode
         self.partitions = partitions
         self.is_efi = disks.get_uefi()

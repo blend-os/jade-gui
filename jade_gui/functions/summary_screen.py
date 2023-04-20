@@ -129,9 +129,7 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             password=self.window.user_screen.password,
             enable_sudo=self.window.user_screen.sudo_enabled,
             disk=self.window.partition_screen.selected_partition,
-            hostname=self.window.misc_screen.hostname,
-            timeshift_enabled=self.window.misc_screen.timeshift_enabled,
-            zramd_enabled=self.window.misc_screen.zramd_enabled,
+            hostname='blend',
             partition_mode=self.window.partition_mode,
             partitions=partitions,
         )

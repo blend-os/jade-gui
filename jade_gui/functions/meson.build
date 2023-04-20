@@ -7,7 +7,6 @@ jade_gui_sources = [
     'timezone_screen.py',
     'locale_screen.py',
     'user_screen.py',
-    'misc_screen.py',
     'partition_screen.py',
     'summary_screen.py',
     'install_screen.py',

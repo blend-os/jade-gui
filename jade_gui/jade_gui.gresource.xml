@@ -14,7 +14,6 @@
     <file>pages/install_screen.ui</file>
     <file>pages/keyboard/keyboard_screen.ui</file>
     <file>pages/keyboard/keyboard_dialog.ui</file>
-    <file>pages/misc_screen.ui</file>
     <file>pages/partition_screen.ui</file>
     <file>pages/summary_screen.ui</file>
 	<file>pages/timezone/timezone_screen.ui</file>
