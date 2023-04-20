@@ -67,6 +67,7 @@ class UserScreen(JadeScreen, Adw.Bin):
         if (
             self.password_entry.get_text() == self.password_confirmation.get_text()
             and self.password_entry.get_text().strip()
+            and "'" not in self.password_entry.get_text().strip()
         ):
             self.password_filled = True
             self.verify_continue()
@@ -84,7 +85,7 @@ class UserScreen(JadeScreen, Adw.Bin):
         self.set_valid(self.password_filled and self.username_filled)
 
     def encrypt_password(self, password):
-        return password_encrypted
+        return password
 
     def carousel_next_summary(self, widget):
         self.next_page.move_to_summary = True
