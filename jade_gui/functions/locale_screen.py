@@ -56,12 +56,14 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         self.window = window
         self.application = application
         self.kwargs = kwargs
-        self.style_provider.load_from_data(b".emptyLocales { font-style: italic; font-size: 15px; }")
+        self.style_provider.load_from_data(".emptyLocales { font-style: italic; font-size: 15px; }", 0)
         Gtk.StyleContext.add_provider(
             self.empty_locales.get_style_context(),
             self.style_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         )
+
+        self.set_valid(True)
 
         builder = Gtk.Builder.new_from_resource(
             "/al/getcryst/jadegui/pages/locale/locale_dialog.ui"
