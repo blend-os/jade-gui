@@ -27,7 +27,7 @@
                   translatable="true">Select partitions to install to</property>
                 <property
                   name="description"
-                  translatable="true">Make sure to have at least one root partition.</property>
+                  translatable="true">Make sure to have at least a boot and root partition (not more than one of each).</property>
                 <property name="css-classes">jade_compact</property>
                 <property name="vexpand">true</property>
                 <child>
