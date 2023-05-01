@@ -56,7 +56,7 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         self.window = window
         self.application = application
         self.kwargs = kwargs
-        self.style_provider.load_from_data(".emptyLocales { font-style: italic; font-size: 15px; }", 0)
+        self.style_provider.load_from_data(b".emptyLocales { font-style: italic; font-size: 15px; }")
         Gtk.StyleContext.add_provider(
             self.empty_locales.get_style_context(),
             self.style_provider,
@@ -84,7 +84,7 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         try:
             self.chosen_locales = [self.window.timezone_screen.chosen_timezone.locale]
         except:
-            self.chosen_locales = ["en_US.UTF-8 UTF-U"]
+            self.chosen_locales = ["en_US.UTF-8 UTF-8"]
 
         en_US = LocaleEntry(
             page=self,
@@ -183,8 +183,7 @@ class LocaleScreen(JadeScreen, Adw.Bin):
         self.chosen_locales = [self.window.timezone_screen.chosen_timezone.locale]
         set_list_text(self.main_locale_list, self.chosen_locales[0])
         self.update_locale_preview()
-        if self.chosen_locales != []:
-            self.set_valid(True)
+        self.set_valid(True)
 
     @staticmethod
     def filter_locales(row, terms=None):

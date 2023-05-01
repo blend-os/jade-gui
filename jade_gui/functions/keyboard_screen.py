@@ -32,7 +32,6 @@ class KeyboardScreen(JadeScreen, Adw.Bin):
 
     event_controller = Gtk.EventControllerKey.new()
 
-    preview = Gtk.Template.Child()
     keyboard_search_button = Gtk.Template.Child()
     country_preview_list = Gtk.Template.Child()
     variant_preview = Gtk.Template.Child()
@@ -93,10 +92,6 @@ class KeyboardScreen(JadeScreen, Adw.Bin):
 
         set_list_text(self.country_preview_list, variant.country)
         set_list_text(self.variant_preview_list, variant.variant)
-
-        self.preview.set_description(
-            f'Test "{variant.country_shorthand} - {variant.variant}"'
-        )
 
         self.set_xkbmap(variant.country_shorthand, variant.variant)
 
