@@ -199,24 +199,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
     def show_page(self, _, page, *__):
         self.carousel.scroll_to(page, True)
 
-    def confirm_quit(self, *_):
-        def handle_response(_widget, response_id):
-            if response_id == Gtk.ResponseType.YES:
-                _widget.destroy()
-                self.destroy()
-            elif response_id == Gtk.ResponseType.NO:
-                _widget.destroy()
-
-        dialog = Gtk.MessageDialog(
-            transient_for=self,
-            modal=True,
-            parent=self,
-            text="Do you want to try\nblendOS without installing?",
-            buttons=Gtk.ButtonsType.YES_NO,
-        )
-        dialog.connect("response", handle_response)
-        dialog.present()
-
     def show_about(self, *_):
         builder = Gtk.Builder.new_from_resource("/al/getcryst/jadegui/about.ui")
         about_window = builder.get_object("aboutWindow")

@@ -10,8 +10,7 @@ filesystems = [
 
 mountpoints = [
     "none",
-    "/",
-    "/boot",
-    "/boot/efi",
-    "/home",
+    "System",
+    "Boot",
+    "User",
 ]

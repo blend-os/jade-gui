@@ -143,7 +143,10 @@ class LocaleScreen(JadeScreen, Adw.Bin):
             self.update_selected_locale_list(add=row.locale, row=locale)
 
     def update_locale_preview(self):
-        locale.setlocale(locale.LC_ALL, self.chosen_locales[0][:-6])
+        try:
+            locale.setlocale(locale.LC_ALL, self.chosen_locales[0][:-6])
+        except:
+            pass
         self.datespreview.set_label(time.strftime(locale.nl_langinfo(locale.D_T_FMT)))
         self.numberpreview.set_label(locale.format_string("%.2f", 1234567.89, grouping=True)+"  -  "+locale.currency(1234.56, grouping=True))
 

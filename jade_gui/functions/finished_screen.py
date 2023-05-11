@@ -67,6 +67,7 @@ class LogWindow(Adw.Window):
 class FinishedScreen(JadeScreen, Adw.Bin):
     __gtype_name__ = "FinishedScreen"
 
+    finished_page = Gtk.Template.Child()
     reboot_button = Gtk.Template.Child()
     output_button = Gtk.Template.Child()
 
@@ -77,6 +78,11 @@ class FinishedScreen(JadeScreen, Adw.Bin):
         self.output_button.connect("clicked", self.output)
 
         self.set_valid(True)
+    
+    def on_show(self):
+        if self.window.install_success == False:
+            self.finished_page.set_title('Installation unsuccessful.')
+            self.finished_page.set_description("Installation was unsuccessful. Reboot and retry installation.")
 
     def reboot(self, widget):
         CommandUtils.run_command(["reboot"])

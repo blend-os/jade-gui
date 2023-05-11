@@ -35,8 +35,8 @@ class SummaryScreen(JadeScreen, Adw.Bin):
     locales = Gtk.Template.Child()
     keyboard_label = Gtk.Template.Child()
     keyboard_button = Gtk.Template.Child()
-    username_label = Gtk.Template.Child()
-    username_button = Gtk.Template.Child()
+    fullname_label = Gtk.Template.Child()
+    fullname_button = Gtk.Template.Child()
     partition_label = Gtk.Template.Child()
     partition_button = Gtk.Template.Child()
     uefi_label = Gtk.Template.Child()
@@ -65,7 +65,7 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         self.keyboard_button.connect(
             "clicked", self.window.show_page, self.window.keyboard_screen
         )
-        self.username_button.connect(
+        self.fullname_button.connect(
             "clicked", self.window.show_page, self.window.user_screen
         )
         self.partition_button.connect(
@@ -97,7 +97,7 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         self.keyboard_label.set_title(self.window.keyboard_screen.variant.country)
         self.keyboard_label.set_subtitle(self.window.keyboard_screen.variant.variant)
 
-        self.username_label.set_title(self.window.user_screen.username)
+        self.fullname_label.set_title(self.window.user_screen.fullname)
 
         if self.window.partition_mode == "Manual":
             self.partition_label.set_title("Manual partitioning selected")
@@ -125,6 +125,7 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             locale=self.window.locale_screen.chosen_locales,
             layout=self.window.keyboard_screen.variant,
             variant=self.window.keyboard_screen.variant,
+            fullname=self.window.user_screen.fullname,
             username=self.window.user_screen.username,
             password=self.window.user_screen.password,
             enable_sudo=self.window.user_screen.sudo_enabled,

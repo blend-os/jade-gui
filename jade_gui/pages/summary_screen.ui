@@ -96,12 +96,12 @@
                       <object class="GtkListBox" id="user_listbox">
                         <property name="selection-mode">none</property>
                         <child>
-                          <object class="AdwActionRow" id="username_label">
+                          <object class="AdwActionRow" id="fullname_label">
                             <property
                               name="title"
-                              translatable="true">username</property>
+                              translatable="true">fullname</property>
                             <child>
-                              <object class="GtkButton" id="username_button">
+                              <object class="GtkButton" id="fullname_button">
                                 <property name="valign">center</property>
                                 <property name="halign">center</property>
                                 <property

@@ -678,7 +678,7 @@ keymaps = [
         ],
     ),
     Keymap(
-        layout="Lativa",
+        layout="Latvia",
         backend_layout="lv",
         variants=[
             "normal",

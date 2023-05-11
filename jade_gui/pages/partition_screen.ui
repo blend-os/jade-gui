@@ -27,7 +27,7 @@
                   translatable="true">Select partitions to install to</property>
                 <property
                   name="description"
-                  translatable="true">Make sure to have at least a boot and root partition (not more than one of each).</property>
+                  translatable="true">Make sure to have at least a boot and system partition (not more than one of each).</property>
                 <property name="css-classes">jade_compact</property>
                 <property name="vexpand">true</property>
                 <child>
@@ -57,10 +57,17 @@
                                   </object>
                                 </child>
                                 <child>
+                                  <object class="GtkButton" id="open_guide">
+                                    <property
+                                      name="label"
+                                      translatable="true">Partitioning How-to</property>
+                                  </object>
+                                </child>
+                                <child>
                                   <object class="GtkButton" id="open_gparted">
                                     <property
                                       name="label"
-                                      translatable="true">Open GParted</property>
+                                      translatable="true">Create Partitions</property>
                                   </object>
                                 </child>
                               </object>

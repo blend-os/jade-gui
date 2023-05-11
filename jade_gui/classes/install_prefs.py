@@ -28,6 +28,7 @@ class InstallPrefs:
         locale,
         layout,
         variant,
+        fullname,
         username,
         password,
         enable_sudo,
@@ -40,6 +41,7 @@ class InstallPrefs:
         self.locale = locale
         self.layout = layout
         self.variant = variant
+        self.fullname = fullname
         self.username = username
         self.password = password
         self.enable_sudo = enable_sudo
@@ -74,6 +76,7 @@ class InstallPrefs:
             "networking": {"hostname": self.hostname, "ipv6": False},
             "users": [
                 {
+                    "fullname": self.fullname,
                     "name": self.username,
                     "password": self.password,
                     "shell": "bash",

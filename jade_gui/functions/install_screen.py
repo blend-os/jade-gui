@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import subprocess, os, shutil
+import subprocess, os, sys, shutil
 import asyncio
 from gi.repository import Gtk, GLib, Adw, Vte, Pango
 from gettext import gettext as _
@@ -66,5 +66,34 @@ class InstallScreen(JadeScreen, Adw.Bin):
             None,
         )
 
-    def on_vte_child_exited(self, *args):
+        self.window.connect('close-request', self.confirm_quit)
+
+    def confirm_quit(self, *_):
+        dialog = Adw.MessageDialog.new(
+            self.window,
+            'Close',
+        )
+        dialog.set_body("Closing the blendOS installer during installation isn't supported.")
+        dialog.add_response("okay", "Ok")
+        dialog.set_default_response("okay")
+        dialog.set_close_response("okay")
+
+        def response(dialog, answer):
+            dialog.destroy()
+
+        dialog.connect("response", response)
+        dialog.show()
+
+        try:
+            self.window.install_success
+            return False
+        except:
+            return True
+
+    def on_vte_child_exited(self, terminal, status):
         self.set_valid(True)
+        
+        if status == 0:
+            self.window.install_success = True
+        else:
+            self.window.install_success = False

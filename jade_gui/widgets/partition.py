@@ -49,10 +49,52 @@ class PartitionEntry(Adw.ActionRow):
     def on_filesystem_select(self, widget):
         print(self.filesystem_dropdown.get_active_text())
         self.partition.filesystem = self.filesystem_dropdown.get_active_text()
-        self.window.partition_screen.set_valid(True)
+        _system = _boot = False
+        _user_count = 0
+        for i in range(0, len(self.window.available_partitions)):
+            _partition = self.window.partition_screen.partition_list.get_row_at_index(
+                i
+            ).partition
+            if _partition.mountpoint == 'System':
+                if _system == True:
+                    _system = False
+                    break
+                _system = True
+            elif _partition.mountpoint == 'Boot':
+                if _boot == True:
+                    _boot = False
+                    break
+                _boot = True
+            elif _partition.mountpoint == 'User':
+                _user_count += 1
+        if _system and _boot and _user_count <= 1:
+            self.window.partition_screen.set_valid(True)
+        else:
+            self.window.partition_screen.set_valid(False)
         print("select " + self.partition.generate_jade_entry())
 
     def on_mountpoint_select(self, widget):
         self.partition.mountpoint = self.mountpoint_dropdown.get_active_text()
-        self.window.partition_screen.set_valid(True)
+        _system = _boot = False
+        _user_count = 0
+        for i in range(0, len(self.window.available_partitions)):
+            _partition = self.window.partition_screen.partition_list.get_row_at_index(
+                i
+            ).partition
+            if _partition.mountpoint == 'System':
+                if _system == True:
+                    _system = False
+                    break
+                _system = True
+            elif _partition.mountpoint == 'Boot':
+                if _boot == True:
+                    _boot = False
+                    break
+                _boot = True
+            elif _partition.mountpoint == 'User':
+                _user_count += 1
+        if _system and _boot and _user_count <= 1:
+            self.window.partition_screen.set_valid(True)
+        else:
+            self.window.partition_screen.set_valid(False)
         print("select " + self.partition.generate_jade_entry())

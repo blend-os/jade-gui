@@ -9,7 +9,7 @@
         <property name="hexpand">true</property>
         <property name="vexpand">true</property>
         <child>
-          <object class="AdwStatusPage">
+          <object class="AdwStatusPage" id="finished_page">
             <property name="hexpand">true</property>
             <property name="vexpand">true</property>
             <property

@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk" version="4.0"/>
+  <requires lib="gtk" version="4.0" />
   <template class="UserScreen" parent="AdwBin">
     <property name="hexpand">true</property>
     <property name="vexpand">true</property>
     <child>
       <object class="GtkBox">
-        <property name="vexpand">true</property>
-        <property name="hexpand">true</property>
+        <property name="orientation">vertical</property>
+        <property name="valign">end</property>
         <child>
-          <object class="AdwStatusPage">
-            <property name="hexpand">true</property>
-            <property name="vexpand">true</property>
-            <property name="title" translatable="true">Create User</property>
-            <property
-              name="description"
-              translatable="true">You can add additional users later.</property>
-            <property name="css-classes">jade_compact</property>
+          <object class="AdwAvatar">
+            <property name="valign">center</property>
+            <property name="size">128</property>
+            <property name="show-initials">True</property>
+            <property name="text" bind-source="fullname_entry" bind-property="text"
+              bind-flags="sync-create" />
+          </object>
+        </child>
+        <child>
+          <object class="AdwStatusPage" id="status_page">
+            <property name="title" translatable="yes">Create User</property>
+            <property name="description" translatable="yes">You may create additional users later.</property>
             <child>
               <object class="AdwPreferencesPage">
                 <child>
                   <object class="AdwPreferencesGroup">
                     <child>
+                      <object class="AdwEntryRow" id="fullname_entry">
+                        <property name="title" translatable="yes">Full Name (only alphanumeric characters)</property>
+                        <property name="input-purpose">name</property>
+                      </object>
+                    </child>
+                    <child>
                       <object class="AdwEntryRow" id="username_entry">
-                        <property
-                          name="title"
-                          translatable="true">Username</property>
+                        <property name="title" translatable="yes">Username (lowercase, only letters or numbers)</property>
+                        <property name="input-purpose">name</property>
                       </object>
                     </child>
                     <child>
                       <object class="AdwPasswordEntryRow" id="password_entry">
-                        <property
-                          name="title"
-                          translatable="true">Password</property>
+                        <property name="title" translatable="yes">Password (at least 8 characters, no ' or $)</property>
+                        <property name="input-purpose">password</property>
                       </object>
                     </child>
                     <child>
-                      <object
-                        class="AdwPasswordEntryRow"
-                        id="password_confirmation">
-                        <property
-                          name="title"
-                          translatable="true">Confirm Password</property>
+                      <object class="AdwPasswordEntryRow" id="password_confirmation">
+                        <property name="title" translatable="yes">Confirm Password</property>
+                        <property name="input-purpose">password</property>
                       </object>
                     </child>
                   </object>
