@@ -53,9 +53,10 @@ class DiskEntry(Adw.ActionRow):
         self.valid = valid
 
     def toggled_cb(self, check_button):
-        if not check_button.props.active:
-            row = check_button.get_ancestor(Gtk.ListBoxRow)
-            row.activate()
-        self.window.partition_screen.selected_partition = self
-        self.window.partition_screen.disk_list.select_row(self)
-        self.valid(True)
+        if not self.window.ignore_selected_disk:
+            if not check_button.props.active:
+                row = check_button.get_ancestor(Gtk.ListBoxRow)
+                row.activate()
+            self.window.partition_screen.selected_partition = self
+            self.window.partition_screen.disk_list.select_row(self)
+            self.valid(True)

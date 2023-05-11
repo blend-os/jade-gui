@@ -246,18 +246,47 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
     def switch_automatic_partitioning(self, widget):
         self.automatic_partitioning_page.set_visible(True)
         self.manual_partitioning_page.set_visible(False)
-        self.set_valid(False)
+        if self.selected_partition == None:
+            self.set_valid(False)
+        else:
+            self.set_valid(True)
         self.window.partition_mode = "Auto"
 
     def switch_manual_partitioning(self, widget):
         self.automatic_partitioning_page.set_visible(False)
         self.manual_partitioning_page.set_visible(True)
-        self.set_valid(False)
+        _system = _boot = False
+        _user_count = 0
+        for i in range(0, len(self.window.available_partitions)):
+            _partition = self.partition_list.get_row_at_index(
+                i
+            ).partition
+            if _partition.mountpoint == 'System':
+                if _system == True:
+                    _system = False
+                    break
+                _system = True
+            elif _partition.mountpoint == 'Boot':
+                if _boot == True:
+                    _boot = False
+                    break
+                _boot = True
+            elif _partition.mountpoint == 'User':
+                _user_count += 1
+        if _system and _boot and _user_count <= 1:
+            self.set_valid(True)
+        else:
+            self.set_valid(False)
         self.window.partition_mode = "Manual"
 
     def row_selected(self, widget, row):
         if row is not None:
             print(row.get_title())
+            for disk in self.disk_list:
+                if disk != row:
+                    self.window.ignore_selected_disk = True
+                    disk.select_button.set_active(False)
+                    self.window.ignore_selected_disk = False
             row.select_button.set_active(True)
             self.selected_partition = row
 
