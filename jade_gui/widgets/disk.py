@@ -26,7 +26,6 @@ class DiskEntry(Adw.ActionRow):
     __gtype_name__ = "DiskEntry"
 
     size_label = Gtk.Template.Child()
-    select_button = Gtk.Template.Child()
 
     def __init__(
         self,
@@ -47,16 +46,4 @@ class DiskEntry(Adw.ActionRow):
         self.set_title(disk[5:])
         self.set_subtitle(disk_type)
         self.size_label.set_label("Disk Size: " + disk_size)
-        if button_group is not None:
-            self.select_button.set_group(button_group)
-        self.select_button.connect("toggled", self.toggled_cb)
         self.valid = valid
-
-    def toggled_cb(self, check_button):
-        if not self.window.ignore_selected_disk:
-            if not check_button.props.active:
-                row = check_button.get_ancestor(Gtk.ListBoxRow)
-                row.activate()
-            self.window.partition_screen.selected_partition = self
-            self.window.partition_screen.disk_list.select_row(self)
-            self.valid(True)

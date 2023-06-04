@@ -282,12 +282,6 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
     def row_selected(self, widget, row):
         if row is not None:
             print(row.get_title())
-            for disk in self.disk_list:
-                if disk != row:
-                    self.window.ignore_selected_disk = True
-                    disk.select_button.set_active(False)
-                    self.window.ignore_selected_disk = False
-            row.select_button.set_active(True)
             self.selected_partition = row
 
             self.set_valid(True)

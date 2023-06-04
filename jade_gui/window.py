@@ -128,7 +128,7 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
                         disk_size=disks.get_disk_size(disk),
                         disk_type=disks.get_disk_type(disk),
                         # disk_model=disks.get_disk_model(disk),
-                        button_group=firstdisk.select_button,
+                        button_group=None,
                         valid=self.page_valid,
                         **kwargs
                     )
