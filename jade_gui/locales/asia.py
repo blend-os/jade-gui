@@ -228,18 +228,13 @@ asia = [
     ),
     locale(
         region="Asia",
-        location="Katmandu",
-        locales="ne_NP.UTF-8 UTF-8",
-    ),
-    locale(
-        region="Asia",
         location="Khandyga",
         locales="ru_RU.UTF-8 UTF-8",
     ),
     locale(
         region="Asia",
         location="Kolkata",
-        locales="hi_IN.UTF-8 UTF-8",
+        locales="en_IN.UTF-8 UTF-8",
     ),
     locale(
         region="Asia",

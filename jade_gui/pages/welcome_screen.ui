@@ -26,7 +26,7 @@
             <property name="title" translatable="yes">Welcome to blendOS</property>
             <property
               name="description"
-              translatable="yes">Press Start to start installing blendOS!</property>
+              translatable="yes">Press Start to set up your computer!</property>
           </object>
         </child>
 

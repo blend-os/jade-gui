@@ -37,9 +37,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
     keyboard_button = Gtk.Template.Child()
     fullname_label = Gtk.Template.Child()
     fullname_button = Gtk.Template.Child()
-    partition_label = Gtk.Template.Child()
-    partition_button = Gtk.Template.Child()
-    uefi_label = Gtk.Template.Child()
     added_locales = []
     # unakite_label = Gtk.Template.Child()
 
@@ -67,9 +64,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
         )
         self.fullname_button.connect(
             "clicked", self.window.show_page, self.window.user_screen
-        )
-        self.partition_button.connect(
-            "clicked", self.window.show_page, self.window.partition_screen
         )
 
     def on_show(self):
@@ -99,27 +93,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
 
         self.fullname_label.set_title(self.window.user_screen.fullname)
 
-        if self.window.partition_mode == "Manual":
-            self.partition_label.set_title("Manual partitioning selected")
-            self.partition_label.set_subtitle("")
-        else:
-            self.partition_label.set_title(
-                self.window.partition_screen.selected_partition.disk
-            )
-            self.partition_label.set_subtitle(
-                self.window.partition_screen.selected_partition.disk_size
-            )
-        self.uefi_label.set_title("UEFI" if disks.get_uefi() else "Legacy BIOS")
-
-        # self.unakite_label.set_title("Unakite enabled "+"enabled" if self.window.misc_screen.)
-
-        partitions = []
-        for i in range(0, len(self.window.available_partitions)):
-            partition = self.window.partition_screen.partition_list.get_row_at_index(
-                i
-            ).partition
-            partitions.append(partition.generate_jade_entry())
-
         self.installprefs = InstallPrefs(
             timezone=self.window.timezone_screen.chosen_timezone,
             locale=self.window.locale_screen.chosen_locales,
@@ -129,9 +102,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             username=self.window.user_screen.username,
             password=self.window.user_screen.password,
             enable_sudo=self.window.user_screen.sudo_enabled,
-            disk=self.window.partition_screen.selected_partition,
             hostname='blend',
-            partition_mode=self.window.partition_mode,
-            partitions=partitions,
         )
         print(self.installprefs.generate_json())

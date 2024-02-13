@@ -90,10 +90,10 @@
                         </child>
                         <child>
                           <object class="AdwActionRow" id="number_preview">
-                            <property name="title">Numbers and currency</property>
+                            <property name="title">Numbers</property>
                             <child>
                               <object class="GtkLabel" id="numberpreview">
-                                <property name="label">numberhere  -  currencyhere</property>
+                                <property name="label">numberhere</property>
                               </object>
                             </child>
                           </object>

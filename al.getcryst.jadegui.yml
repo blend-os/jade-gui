@@ -1,6 +1,6 @@
 app-id: al.getcryst.jadegui
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: jade-gui
 finish-args:

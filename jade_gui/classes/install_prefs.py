@@ -32,10 +32,7 @@ class InstallPrefs:
         username,
         password,
         enable_sudo,
-        disk,
         hostname,
-        partition_mode,
-        partitions,
     ):
         self.timezone = timezone
         self.locale = locale
@@ -45,29 +42,10 @@ class InstallPrefs:
         self.username = username
         self.password = password
         self.enable_sudo = enable_sudo
-        if partition_mode.lower() != "manual":
-            self.disk = disk.disk
-        else:
-            self.disk = ""
         self.hostname = hostname if len(hostname) != 0 else "crystal"
-        self.partition_mode = partition_mode
-        self.partitions = partitions
-        self.is_efi = disks.get_uefi()
-        self.bootloader_type = "grub-efi" if self.is_efi else "grub-legacy"
-        self.bootloader_location = "/boot/efi/" if self.is_efi else self.disk
 
     def generate_json(self):
         prefs = {
-            "partition": {
-                "device": self.disk,
-                "mode": self.partition_mode,
-                "efi": self.is_efi,
-                "partitions": self.partitions,
-            },
-            "bootloader": {
-                "type": self.bootloader_type,
-                "location": self.bootloader_location,
-            },
             "locale": {
                 "locale": self.locale,
                 "keymap": self.layout.country_shorthand,

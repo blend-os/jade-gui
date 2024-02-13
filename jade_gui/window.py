@@ -62,9 +62,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.installer_screen = InstallScreen(
             window=self, set_valid=self.page_valid, **kwargs
         )
-        self.partition_screen = PartitionScreen(
-            window=self, set_valid=self.page_valid, **kwargs
-        )
         self.user_screen = UserScreen(window=self, set_valid=self.page_valid, **kwargs)
         self.keyboard_screen = KeyboardScreen(
             window=self, set_valid=self.page_valid, keymaps=keymaps, **kwargs
@@ -91,8 +88,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.carousel.append(self.timezone_screen)
         self.carousel.append(self.locale_screen)
         self.carousel.append(self.user_screen)
-        self.carousel.append(self.partition_screen)
-        # self.carousel.append(self.manual_partition)
         self.carousel.append(self.summary_screen)
         self.carousel.append(self.installer_screen)
         self.carousel.append(self.finished_screen)
@@ -106,49 +101,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.next_button.connect("clicked", self.next)
         self.back_button.connect("clicked", self.back)
 
-        ### Test partitions
-        self.available_disks = disks.get_disks()
-        firstdisk = DiskEntry(
-            window=self,
-            disk=self.available_disks[0],
-            disk_size=disks.get_disk_size(self.available_disks[0]),
-            disk_type=disks.get_disk_type(self.available_disks[0]),
-            # disk_model=disks.get_disk_model(available_disks[0]),
-            button_group=None,
-            valid=self.page_valid,
-            **kwargs
-        )
-        self.partition_screen.disk_list.append(firstdisk)
-        for disk in self.available_disks:
-            if disk != self.available_disks[0]:
-                self.partition_screen.disk_list.append(
-                    DiskEntry(
-                        window=self,
-                        disk=disk,
-                        disk_size=disks.get_disk_size(disk),
-                        disk_type=disks.get_disk_type(disk),
-                        # disk_model=disks.get_disk_model(disk),
-                        button_group=None,
-                        valid=self.page_valid,
-                        **kwargs
-                    )
-                )
-
-        self.available_partitions = disks.get_partitions()
-        for partition in self.available_partitions:
-            self.partition_screen.partition_list.append(
-                PartitionEntry(
-                    window=self,
-                    partition=Partition(
-                        partition=partition,
-                        mountpoint="",
-                        filesystem="",
-                        size=disks.get_disk_size(partition),
-                    ),
-                    **kwargs
-                )
-            )
-        ### ---------
         RunAsync(self.welcome_screen.check_internet)
 
     def online(self):
