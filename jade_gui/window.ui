@@ -29,6 +29,7 @@
     <property name="resizable">false</property>
     <child type="titlebar">
       <object class="AdwHeaderBar" id="header_bar">
+        <property name="show-end-title-buttons">false</property>
         <property name="title-widget">
           <object class="GtkBox">
             <child>
