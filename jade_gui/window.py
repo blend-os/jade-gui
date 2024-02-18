@@ -134,8 +134,7 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         RunAsync(self.welcome_screen.check_internet)
 
     def online(self):
-        if self.timezone_screen.guessed_timezone is None:
-            self.timezone_screen.ip_request_timezone()
+        pass
 
     def _get_current_page(self, offset=0) -> JadeScreen:
         current_index = self.carousel.get_position()
