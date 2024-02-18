@@ -23,10 +23,6 @@ from gi.repository import Gtk, Gdk, GLib, Adw
 from jade_gui.classes.partition import Partition
 from jade_gui.widgets.disk import DiskEntry
 from jade_gui.widgets.partition import PartitionEntry
-from jade_gui.functions.keyboard_screen import KeyboardScreen
-from jade_gui.functions.timezone_screen import TimezoneScreen
-from jade_gui.functions.locale_screen import LocaleScreen
-from jade_gui.functions.user_screen import UserScreen
 from jade_gui.functions.partition_screen import PartitionScreen
 from jade_gui.functions.summary_screen import SummaryScreen
 from jade_gui.functions.install_screen import InstallScreen
@@ -46,7 +42,7 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
     event_controller = Gtk.EventControllerKey.new()
     carousel = Gtk.Template.Child()
 
-    #   quit_button = Gtk.Template.Child()
+    # quit_button = Gtk.Template.Child()
     about_button = Gtk.Template.Child()
     # no_internet = Gtk.Template.Child()
 
@@ -65,16 +61,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
         self.partition_screen = PartitionScreen(
             window=self, set_valid=self.page_valid, **kwargs
         )
-        self.user_screen = UserScreen(window=self, set_valid=self.page_valid, **kwargs)
-        self.keyboard_screen = KeyboardScreen(
-            window=self, set_valid=self.page_valid, keymaps=keymaps, **kwargs
-        )
-        self.timezone_screen = TimezoneScreen(
-            window=self, set_valid=self.page_valid, locations=locations, **kwargs
-        )
-        self.locale_screen = LocaleScreen(
-            window=self, set_valid=self.page_valid, locations=locations, **kwargs
-        )
         self.welcome_screen = WelcomeScreen(
             window=self,
             set_valid=self.page_valid,
@@ -87,10 +73,6 @@ class JadeGuiWindow(Gtk.ApplicationWindow):
             window=self, set_valid=self.page_valid, **kwargs
         )
         self.carousel.append(self.welcome_screen)
-        self.carousel.append(self.keyboard_screen)
-        self.carousel.append(self.timezone_screen)
-        self.carousel.append(self.locale_screen)
-        self.carousel.append(self.user_screen)
         self.carousel.append(self.partition_screen)
         # self.carousel.append(self.manual_partition)
         self.carousel.append(self.summary_screen)

@@ -30,17 +30,9 @@ from gettext import gettext as _
 class SummaryScreen(JadeScreen, Adw.Bin):
     __gtype_name__ = "SummaryScreen"
 
-    timezone_label = Gtk.Template.Child()
-    timezone_button = Gtk.Template.Child()
-    locales = Gtk.Template.Child()
-    keyboard_label = Gtk.Template.Child()
-    keyboard_button = Gtk.Template.Child()
-    fullname_label = Gtk.Template.Child()
-    fullname_button = Gtk.Template.Child()
     partition_label = Gtk.Template.Child()
     partition_button = Gtk.Template.Child()
     uefi_label = Gtk.Template.Child()
-    added_locales = []
     # unakite_label = Gtk.Template.Child()
 
     def __init__(self, window, application, **kwargs):
@@ -49,55 +41,11 @@ class SummaryScreen(JadeScreen, Adw.Bin):
 
         self.set_valid(True)
 
-        self.locale_button = Gtk.Button(
-            icon_name="document-edit-symbolic",
-            halign="center",
-            valign="center"
-        )
-        self.locales.add_action(self.locale_button)
-
-        self.timezone_button.connect(
-            "clicked", self.window.show_page, self.window.timezone_screen
-        )
-        self.locale_button.connect(
-            "clicked", self.window.show_page, self.window.locale_screen
-        )
-        self.keyboard_button.connect(
-            "clicked", self.window.show_page, self.window.keyboard_screen
-        )
-        self.fullname_button.connect(
-            "clicked", self.window.show_page, self.window.user_screen
-        )
         self.partition_button.connect(
             "clicked", self.window.show_page, self.window.partition_screen
         )
 
     def on_show(self):
-        self.timezone_label.set_title(
-            self.window.timezone_screen.chosen_timezone.region
-            + "/"
-            + self.window.timezone_screen.chosen_timezone.location
-        )
-        for i in self.window.locale_screen.chosen_locales:
-            if i not in self.added_locales:
-                self.locales.add_row(
-                    Adw.ActionRow(
-                        title=i,
-                        activatable=False,
-                        selectable=False,
-                        subtitle="Main locale" if i == self.window.locale_screen.chosen_locales[0] else ""
-                    )
-                )
-                self.added_locales.append(i)
-        if len(self.window.locale_screen.chosen_locales) >= 5:
-            self.locales.set_expanded(False)
-        else:
-            self.locales.set_expanded(True)
-
-        self.keyboard_label.set_title(self.window.keyboard_screen.variant.country)
-        self.keyboard_label.set_subtitle(self.window.keyboard_screen.variant.variant)
-
-        self.fullname_label.set_title(self.window.user_screen.fullname)
 
         if self.window.partition_mode == "Manual":
             self.partition_label.set_title("Manual partitioning selected")
@@ -121,14 +69,6 @@ class SummaryScreen(JadeScreen, Adw.Bin):
             partitions.append(partition.generate_jade_entry())
 
         self.installprefs = InstallPrefs(
-            timezone=self.window.timezone_screen.chosen_timezone,
-            locale=self.window.locale_screen.chosen_locales,
-            layout=self.window.keyboard_screen.variant,
-            variant=self.window.keyboard_screen.variant,
-            fullname=self.window.user_screen.fullname,
-            username=self.window.user_screen.username,
-            password=self.window.user_screen.password,
-            enable_sudo=self.window.user_screen.sudo_enabled,
             disk=self.window.partition_screen.selected_partition,
             hostname='blend',
             partition_mode=self.window.partition_mode,

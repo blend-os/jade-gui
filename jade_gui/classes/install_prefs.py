@@ -24,32 +24,16 @@ import json
 class InstallPrefs:
     def __init__(
         self,
-        timezone,
-        locale,
-        layout,
-        variant,
-        fullname,
-        username,
-        password,
-        enable_sudo,
         disk,
         hostname,
         partition_mode,
         partitions,
     ):
-        self.timezone = timezone
-        self.locale = locale
-        self.layout = layout
-        self.variant = variant
-        self.fullname = fullname
-        self.username = username
-        self.password = password
-        self.enable_sudo = enable_sudo
         if partition_mode.lower() != "manual":
             self.disk = disk.disk
         else:
             self.disk = ""
-        self.hostname = hostname if len(hostname) != 0 else "crystal"
+        self.hostname = hostname if len(hostname) != 0 else "blend"
         self.partition_mode = partition_mode
         self.partitions = partitions
         self.is_efi = disks.get_uefi()
@@ -68,21 +52,7 @@ class InstallPrefs:
                 "type": self.bootloader_type,
                 "location": self.bootloader_location,
             },
-            "locale": {
-                "locale": self.locale,
-                "keymap": self.layout.country_shorthand,
-                "timezone": self.timezone.region + "/" + self.timezone.location,
-            },
             "networking": {"hostname": self.hostname, "ipv6": False},
-            "users": [
-                {
-                    "fullname": self.fullname,
-                    "name": self.username,
-                    "password": self.password,
-                    "shell": "bash",
-                }
-            ],
-            "flatpak": True,
-            "kernel": "linux",
+            "kernel": "linux-zen",
         }
         return json.dumps(prefs)
